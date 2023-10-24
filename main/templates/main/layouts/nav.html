@@ -4,12 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSJ</title>
+    <title>CSJ Grupo Inmobiliario</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon csj.png' %}">
     <link rel="stylesheet" href="{% static 'clases.css' %}">
     <script src="{% static 'script.js' %}"></script>
+    <style>
+        .intro-img{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.336)), url("{% static 'Fondo intro home.jpg'%}");
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container-fluid">
             <a href="/" class="link-logo">
                 <img src="{% static 'Logo CSJ.png' %}" class="imagen-logo">
@@ -27,8 +34,13 @@
                     </li>
                     <li class="nav-link">
                         <a href="/nosotros" class="nav-item">Nosotros</a>
-                    </li>
+                        </li>
                 </ul>
+            </div>
+            <div class="container-contact">
+                <button class="contact">
+                    ¡Contáctanos!
+                </button>
             </div>
         </div>
     </nav>
