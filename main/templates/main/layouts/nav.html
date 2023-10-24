@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSJ</title>
+    <link rel="stylesheet" href="{% static 'clases.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a href="/" class="link-logo">
+                <img src="{% static 'Logo CSJ.png' %}" class="imagen-logo">
+            </a>
+            <div>
+                <div class="navbar-toggler" onclick="toggleMenu()">
+                    <img src="{% static 'Menu button.jpg'%}" class="imagen-menu">
+                </div>
+                <ul class="navbar-nav" id="nav-items">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/proyectos">Proyectos</a>
+                    </li>
+                    <li>
+                        <a href="/nosotros">Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
