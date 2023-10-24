@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .navbar {
     background-color: #004763;
@@ -7,6 +8,7 @@ body {
 .container-fluid{
     display: flex;
     flex-grow: 1;
+    column-gap: 3vw;
 }
 .link-logo{
     width: 15vw;
@@ -19,15 +21,13 @@ body {
     border-bottom-right-radius: max(6vw, 35px);
 }
 .imagen-logo{
-    height: 10vw;
+    height: 8vw;
     min-height: 70px;
-    max-height: 150px;
+    max-height: 125px;
     align-self: center;
     padding: 1vw;
 }
 .navbar-toggler {
-    height: 35px;
-    width: 45px;
     display: none;
     cursor: pointer;
 }
@@ -37,11 +37,46 @@ body {
 }
 .navbar-nav {
     display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+.nav-item {
+    border-radius: 40px;
+    color: #4DAFCA;
+    text-transform: uppercase;
+    flex: 0 auto;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 20px;
+    font-size: min(3vw,25px);
+    font-weight: 600;
+    line-height: 20px;
+    display: block;
+    text-decoration: none;
+}
+.nav-link {
+    vertical-align: top;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+}
+.navbar-container {
+    display: flex;
+
+}
+.intro {
+    height: 100vh;
 }
 
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 800px) {
     .navbar-toggler {
-      display: block;
+        display: flex;
+        align-items: center;
+        margin-right: 10vw;
     }
     .navbar-nav{
         display: none;
@@ -54,11 +89,17 @@ body {
         z-index: 1;
         padding: 0px;
         margin-block-start: 0px;
+        background-color: #004763;
+        border-bottom-left-radius: 45px;
+        border-bottom-right-radius: 45px;
     }
     .navbar-nav-active {
         display: flex;
     }
     .link-logo {
         min-width: 120px;
+    }
+    .container-fluid {
+        justify-content: space-between;
     }
 }
