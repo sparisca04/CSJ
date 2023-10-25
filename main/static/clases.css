@@ -17,9 +17,14 @@ body {
     flex-grow: 1;
     background-color: #004763;
 }
+.hidden {
+    position: fixed !important;
+    visibility: hidden;
+    opacity: 0;
+}
 .link-logo{
-    width: 23vw;
-    min-width: 100px;
+    width: 18vw;
+    min-width: 4cm;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,11 +34,23 @@ body {
     position: fixed;
 }
 .imagen-logo{
-    height: 15vw;
-    min-height: 70px;
+    height: 10vw;
+    min-height: 3cm;
     max-height: 200px;
     align-self: center;
-    padding: 1vw;
+    padding: 0.5cm;
+    position: unset;
+    z-index: 1;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+.imagen-logo-pequeña{
+    height: 7vw;
+    min-height: 2.5cm;
+    max-height: 200px;
+    align-self: center;
+    padding: 0.55cm;
+    position: unset;
+    transition: opacity 0.5s, visibility 0.5s;
 }
 .navbar-toggler {
     display: none;
@@ -184,9 +201,6 @@ body {
         opacity: 1;
         visibility: visible;
         transition: opacity 0.5s, visibility 0.5s;
-    }
-    .link-logo {
-        min-width: 120px;
     }
     .navbar-container {
         justify-content: space-evenly;

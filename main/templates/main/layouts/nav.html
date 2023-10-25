@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSJ Grupo Inmobiliario</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'favicon csj.png' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'Imagenes/favicon csj.png' %}">
     <link rel="stylesheet" href="{% static 'clases.css' %}">
     <script src="{% static 'script.js' %}"></script>
     <style>
         .intro-img{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.336)), url("{% static 'Fondo intro home.jpg'%}");
+            background-image: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.336)), url("{% static 'Imagenes/Fondo intro home.jpg'%}");
             background-size: cover;
         }
     </style>
@@ -19,7 +19,8 @@
     <nav class="navbar" id="navbar">
         <div class="container-fluid">
             <a href="/" class="link-logo">
-                <img src="{% static 'Logo CSJ.png' %}" class="imagen-logo">
+                <img src="{% static 'Imagenes/Logo CSJ.jpg' %}" class="imagen-logo" id="logo">
+                <img src="{% static 'Imagenes/Logo CSJ sin slogan.jpg' %}" class="imagen-logo-pequeña hidden" id="logo-pequeño">
             </a>
             <div class="navbar-container">
                 <ul class="navbar-nav" id="nav-items">
@@ -39,7 +40,7 @@
                     </button>
                 </div>
                 <div class="navbar-toggler" onclick="toggleMenu()">
-                    <img src="{% static 'Menu button.jpg'%}" class="imagen-menu">
+                    <img src="{% static 'Imagenes/Menu button.jpg'%}" class="imagen-menu">
                 </div>
             </div>
         </div>
