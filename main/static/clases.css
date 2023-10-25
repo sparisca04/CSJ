@@ -160,19 +160,7 @@ body {
     margin: 0px;
     font-weight: 400;
 }
-#contador {
-    font-size: 24px;
-    text-align: center;
-    animation: contar 1s linear;
-  }
-  
-  @keyframes contar {
-    from { content: '0'; }
-    to { content: '45'; }
-  }
-  #contador.animar {
-    animation-play-state: running;
-  }
+
   
 
 @media only screen and (max-width: 960px) {
