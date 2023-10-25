@@ -54,8 +54,8 @@ body {
     color: #4dafca;
     text-transform: uppercase;
     flex: 0 auto;
-    padding: 25px;
-    font-size: max(2vw,30px);
+    padding: 15px;
+    font-size: max(1.5vw,20px);
     font-weight: 600;
     line-height: 20px;
     display: block;
@@ -82,6 +82,8 @@ body {
     min-height: 60px;
     height: 8vw;
     max-height: 145px;
+    justify-content: space-evenly;
+    margin-left: 20vw;
 }
 .intro {
     height: 100vh;
@@ -98,32 +100,60 @@ body {
     display: flex;
     align-content: center;
     flex-wrap: wrap;
-    margin-right: 5vw;
 }
 .contact {
     background-color: #002838;
     border: none;
     height: fit-content;
-    font-size: 1vw;
+    font-size: max(0.8vw, 13px);
     color: white;
-    padding: 15px 30px;
-    border-radius: 25px;
+    padding: 18px 30px;
+    border-radius: 30px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
+}
+.grid-proyectos {
+    height: 100vh;
+    padding: 8vw;
+}
+.fila {
+    display: flex;
+    justify-content: space-around;
+}
+.col {
+    width: 20%;
+}
+.container-data {
+    display: flex;
+    justify-content: space-evenly;
+}
+.data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.data-icon {
+    width: 15vw;
+    min-width: 130px;
+}
+.indicador {
+    font-size: max(7vw, 50px);
+    color: #004763;
+    margin: 0px;
+    font-weight: 400;
 }
 
 @media only screen and (max-width: 960px) {
     .navbar-toggler {
         display: flex;
         align-items: center;
-        margin-right: 10vw;
     }
     .navbar-nav{
-        display: none;
         flex-direction: column;
         position: absolute;
         left: 0;
+        top: max(8vw, 60px);
         width: 100%;
         text-align: center;
         z-index: 1;
@@ -132,20 +162,47 @@ body {
         background-color: #004763;
         border-bottom-left-radius: 45px;
         border-bottom-right-radius: 45px;
+        opacity: 0;
+        visibility: hidden;
     }
     .navbar-nav-active {
         display: flex;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s, visibility 0.5s;
     }
     .link-logo {
         min-width: 120px;
     }
     .navbar-container {
-        justify-content: flex-end;
+        justify-content: space-evenly;
     }
     .nav-link {
         padding: 5px;
     }
     .nav-item {
         font-size: 20px;
+    }
+    .container-data {
+        flex-direction: column;
+        row-gap: 6vw;
+    }
+    .fila {
+        flex-direction: column;
+        height: -webkit-fill-available;
+        row-gap: 6vw;
+        align-items: center;
+        justify-content: unset;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .container-contact {
+        display: none;
+    }
+    .navbar-container {
+        justify-content: flex-end;
+    }
+    .navbar-toggler {
+        margin-right: 10vw;
     }
 }

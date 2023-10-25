@@ -22,9 +22,6 @@
                 <img src="{% static 'Logo CSJ.png' %}" class="imagen-logo">
             </a>
             <div class="navbar-container">
-                <div class="navbar-toggler" onclick="toggleMenu()">
-                    <img src="{% static 'Menu button.jpg'%}" class="imagen-menu">
-                </div>
                 <ul class="navbar-nav" id="nav-items">
                     <li class="nav-link">
                         <a href="/" class="nav-item">Home</a>
@@ -36,11 +33,14 @@
                         <a href="/nosotros" class="nav-item">Nosotros</a>
                         </li>
                 </ul>
-            </div>
-            <div class="container-contact">
-                <button class="contact">
-                    ¡Contáctanos!
-                </button>
+                <div class="container-contact">
+                    <button class="contact">
+                        ¡Contáctanos!
+                    </button>
+                </div>
+                <div class="navbar-toggler" onclick="toggleMenu()">
+                    <img src="{% static 'Menu button.jpg'%}" class="imagen-menu">
+                </div>
             </div>
         </div>
     </nav>
