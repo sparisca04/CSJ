@@ -5,6 +5,43 @@ body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
+.title {
+    font-size: 50px;
+    text-align: center;
+    color: #004763;
+}
+.paragraph {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: #f2f2f2;
+}
+.container img {
+    max-width: 50%;
+    object-fit: cover;
+    height: 100%;
+}
+.container .text {
+    width: 45%;
+    padding: 20px;
+    background-color: #fff; /* meter la textura blanca */
+}
+.container.reverse {
+    flex-direction: row-reverse;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
 .navbar {
     background-color: #004763;
     height: 5vw;
@@ -116,12 +153,12 @@ body {
 .intro-title {
     color: white;
     text-transform: uppercase;
-    font-size: max(3.5vw,32px);
+    font-size: max(2.5vw,28px);
     margin: 0px;
 }
 .divider {
     height: 5px;
-    width: 50%;
+    width: auto;
     background-color: #4DB0CB;
     margin: 15px 0px;
 }
@@ -145,12 +182,12 @@ body {
     cursor: pointer;
 }
 .grid-proyectos {
-    height: 100vh;
+    min-height: 100vh;
     padding: 8vw;
     padding-top: 30px;
 }
 .fila {
-    height: 25%;
+    height: 25vw;
     padding: 40px 0px;
     display: flex;
     justify-content: space-around;
@@ -201,9 +238,49 @@ body {
 .entregado {
     background-color: #17b302
 }
+.construccion {
+    background-color: #e49c00
+}
+.container-footer {
+    width: 100%;
+    display: flex;
+    min-height: 400px;
+    background-color: #6F6F73;
+}
+.footer {
+    padding: 5vw;
+}
+.block-footer {
+    padding: 2vw;
+}
+.block-footer-subt {
+    width: fit-content;
+}
+.footer-subt {
+    text-transform: uppercase;
+    color: white;
+    margin: 10px 0px;
+}
+.footer-divider {
+    width: auto;
+    height: 4px;
+    background-color: #4DB0CB;
+}
+.img-grande {
+    height: 25vw;
+    min-height: 8cm;
+    max-height: unset;
+    z-index: inherit;
+}
+.block-footer-info {
+    color: #D9D9DA;
+}
   
 
 @media only screen and (max-width: 960px) {
+    .container-footer {
+        flex-direction: column;
+    }
     .navbar-toggler {
         display: flex;
         align-items: center;

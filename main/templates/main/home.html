@@ -3,8 +3,10 @@
 {% load static %}
 {% block content %}
 <div class="intro intro-bg">
-    <h1 class="intro-title">El lugar que soñamos</h1>
-    <div class="divider"></div>
+    <div>
+        <h1 class="intro-title">El lugar que soñamos</h1>
+        <div class="divider"></div>
+    </div>
     <div class="container-contact">
         <button class="contact" onclick="document.location='/proyectos'">
             Conoce Nuestros proyectos
@@ -22,16 +24,50 @@
     </div>
 </div>
 <div class="proyectos-bg">
-    <div style="text-align: center; padding-top: 8vw"><h1 class="intro-title">Proyectos en ejecución</h1></div>
+    <div style="text-align: center; padding-top: 80px"><h1 class="intro-title">Proyectos en ejecución</h1></div>
     <div class="grid-proyectos">
         <div class="fila">
             <div class="col">
-                <h2>Villa Romera Etapa 1</h2>
+                <h2>Etapa 1 - Villa Romera Campestre</h2>
                 <h2 class="estado entregado">Entregado</h2>
             </div>
             <div class="col">
-                <h2>Villa Romera Etapa 2</h2>
+                <h2>Etapa 2 - Villa Romera Campestre</h2>
                 <h2 class="estado entregado">Entregado</h2>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="col">
+                <h2>Etapa 3 - Villa Romera Campestre</h2>
+                <h2 class="estado entregado">Entregado</h2>
+            </div>
+            <div class="col">
+                <h2>Torre 10 - Villa Romera Olivo</h2>
+                <h2 class="estado construccion">En construcción</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-footer">
+    <img class="imagen-logo img-grande" src="{% static 'Imagenes/Logo CSJ gris.png'%}" alt="CSJ Grupo Inmobiliario">
+    <div class="footer">
+        <div class="block-footer">
+            <div class="block-footer-subt">
+                <h3 class="footer-subt">Contacto</h3>
+                <div class="footer-divider"></div>
+            </div>
+            <div class="block-footer-info">
+                <p><strong>Teléfono:</strong> 301 618 3674</p>
+                <p><strong>Correo:</strong> secretaria@csjgrupoinmobiliaria.com</p>
+            </div>
+        </div>
+        <div class="block-footer">
+            <div class="block-footer-subt">
+                <h3 class="footer-subt">Ubicación</h3>
+                <div class="footer-divider"></div>
+            </div>
+            <div class="block-footer-info">
+                <p><strong>Dirección:</strong> Indiana Mall, Km 17 Via las palmas, oficina 288.</p>
             </div>
         </div>
     </div>
