@@ -9,16 +9,24 @@
     <link rel="stylesheet" href="{% static 'clases.css' %}">
     <script src="{% static 'script.js' %}"></script>
     <style>
-        .intro-img{
+        .intro-bg{
             background-image: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.336)), url("{% static 'Imagenes/Fondo intro home.jpg'%}");
             background-size: cover;
+        }
+        .data-bg{
+            background-image: url("{% static 'Imagenes/Textura claro.png'%}");
+            background-size: contain;
+        }
+        .proyectos-bg{
+            background-image: url("{% static 'Imagenes/Textura oscuro.png'%}");
+            background-size: contain;
         }
     </style>
 </head>
 <body>
     <nav class="navbar" id="navbar">
         <div class="container-fluid">
-            <a href="/" class="link-logo">
+            <a href="/" class="link-logo" id="link-logo">
                 <img src="{% static 'Imagenes/Logo CSJ.jpg' %}" class="imagen-logo" id="logo">
                 <img src="{% static 'Imagenes/Logo CSJ sin slogan.jpg' %}" class="imagen-logo-pequeña hidden" id="logo-pequeño">
             </a>
@@ -35,7 +43,7 @@
                         </li>
                 </ul>
                 <div class="container-contact">
-                    <button class="contact">
+                    <button class="contact" onclick="document.location='/contact'">
                         ¡Contáctanos!
                     </button>
                 </div>

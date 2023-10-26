@@ -2,28 +2,38 @@
 
 {% load static %}
 {% block content %}
-<div class="intro intro-img">
+<div class="intro intro-bg">
     <h1 class="intro-title">El lugar que soñamos</h1>
+    <div class="divider"></div>
+    <div class="container-contact">
+        <button class="contact" onclick="document.location='/proyectos'">
+            Conoce Nuestros proyectos
+        </button>
+    </div>
 </div>
-<div class="container-data">
+<div class="container-data data-bg">
     <div class="data">
-        <h1 style="text-align: center;"> <p class="indicador">+150.000</p> m<sup>2</sup> construidos.</h1>
+        <h1 class="data-text"> <p class="indicador">+150.000</p> m<sup>2</sup> construidos.</h1>
         <img class="data-icon" src="{% static 'Imagenes/metros.png'%}" alt="">
     </div>
     <div class="data">
-        <h1 style="text-align: center;"><p class="indicador">+25</p> años de experiencia</h1>
+        <h1 class="data-text"><p class="indicador">+25</p> años de experiencia</h1>
         <img class="data-icon" src="{% static 'Imagenes/experiencia.png'%}" alt="">
     </div>
 </div>
-<div class="grid-proyectos">
-    <div class="fila">
-        <div class="col">
-            <h2>Villa Romera Etapa 1</h2>
-        </div>
-        <div class="col">
-            <h2>Villa Romera Etapa 2</h2>
+<div class="proyectos-bg">
+    <div style="text-align: center; padding-top: 8vw"><h1 class="intro-title">Proyectos en ejecución</h1></div>
+    <div class="grid-proyectos">
+        <div class="fila">
+            <div class="col">
+                <h2>Villa Romera Etapa 1</h2>
+                <h2 class="estado entregado">Entregado</h2>
+            </div>
+            <div class="col">
+                <h2>Villa Romera Etapa 2</h2>
+                <h2 class="estado entregado">Entregado</h2>
+            </div>
         </div>
     </div>
 </div>
-
 {% endblock %}
