@@ -1,5 +1,112 @@
 {% extends 'main/layouts/nav.html' %}
 
 {% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conocenos</title>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			margin: 0;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			
+			
+		}
+
+		h1 {
+			font-size: 44px;
+			margin-top: 40px;
+			color: #004763;
+			text-align: center;
+		}
+
+		p {
+			font-size: 20px;
+			margin-top: 10px;
+			text-align: justify;
+		}
+
+		.container {
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 20px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			background-color: #f2f2f2;
+		}
+
+		.container img {
+			max-width: 50%;
+			object-fit: cover;
+			height: 100%;
+		}
+
+		.container .text {
+			width: 45%;
+			padding: 20px;
+			background-color: #fff; /* meter la textura blanca */
+		}
+
+		.container.reverse {
+			flex-direction: row-reverse;
+		}
+		.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.title {
+  font-size: 50px;
+  text-align: center;
+  color: #004763;
+}
+
+.paragraph {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/220px-African_Bush_Elephant.jpg" alt="African Bush Elephant">
+		<div class="text">
+			<h1>MISIÓN</h1>
+			<p>CSJ GRUPO INMOBILIARIA S.AS., es una compañía que promociona, gerencia y construye proyectos inmobiliarios y comerciales, trabajamos con ética y responsabilidad, garantizando la calidad y excelencia de las obras, buscando la mejora continua de los procesos, en procura del respeto al medio ambiente y la sociedad, con el fin de satisfacer las necesidades de sus clientes, en pro del bienestar de nuestro personal y sus socios.</p>
+		</div>
+	</div>
+
+	<div class="container reverse">
+		<div class="text">
+			<h1>VISION</h1>
+			<p>Hacer de CSJ GRUPO INMOBILIARIA S.A.S, una compañía estable en la industria de la construcción a nivel nacional, que alcance una participación solida en el mercado, que le permita contribuir al desarrollo económico del sector y que se destaque por la calidad de sus servicios, la capacidad técnica, la protección del
+				medio ambiente, la salud, la seguridad y la excelencia de sus personal.</p>
+		</div>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Orca_-_Lofoten%2C_Norway.jpg/220px-Orca_-_Lofoten%2C_Norway.jpg" alt="Orca">
+	</div>
+	<div class="section">
+		<h1 class="title">OBJETO SOCIAL</h1>
+		<p class="paragraph">Desarrollo, promoción y construcción de proyectos
+			inmobiliarios</p>
+	  </div>
+	  
+</body>
+</html>
+
+
+
+
+
+
+
 
 {% endblock %}
