@@ -111,13 +111,11 @@ body {
     flex: 0 auto;
     padding: 15px;
     font-size: max(1.5vw,20px);
-    line-height: 20px;
     display: block;
     text-decoration: none;
 }
 .nav-item:hover {
-    background-color: #6F6F73;
-    color: white;
+    color: #4DB0CB;
 }
 .nav-link {
     vertical-align: top;
@@ -127,6 +125,38 @@ body {
     padding: 20px;
     display: inline-block;
     position: relative;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    font-family: inherit;
+}
+.dropdown-content {
+    border-radius: 5px;
+    margin-left: 15px;
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    border-radius: 5px;
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 .navbar-container {
     display: flex;
@@ -141,32 +171,10 @@ body {
     margin-right: 3vw;
     column-gap: 2vw;
 }
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
+.container-divider {
+    height: 3px;
     width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: rgb(55, 0, 255);
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-}
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.slider1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+    background-color: #75CED5;
 }
 .intro {
     height: 100vh;
@@ -215,10 +223,74 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
 }
+.container-atributos {
+    height: 80vh;
+    padding: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.atributo {
+    width: fit-content;
+    height: fit-content;
+    color: #004763;
+    font-size: max(3vw,28px);
+    transition: color 0.6s ease, box-shadow 0.6s ease;
+    text-transform: uppercase;
+    padding: 20px 50px;
+    margin: 0px 50px;
+    text-align: center;
+}
+.atributo:hover {
+    color: #00476391;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #ffffff9d;
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    mix-blend-mode: exclusion;
+}
+.next {
+    border-radius: 3px 0 0 3px;
+    align-self: flex-end;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+.active {
+    background-color: #717171;
+}
+.slider1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 5%;
+}
 .carrusel-proyectos {
     display: flex;
     justify-content: center;
-    height: 45vw;
+    height: 40vw;
+    min-height: 500px;
 }
 .slide {
     width: 100%;

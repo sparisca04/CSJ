@@ -7,12 +7,13 @@
     <title>CSJ Grupo Inmobiliario</title>
     <link rel="icon" type="image/x-icon" href="{% static 'Imagenes/favicon csj.png' %}">
     <link rel="stylesheet" href="{% static 'clases.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="{% static 'script.js' %}"></script>
     <style>
         .intro-bg{
             background-image: linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.336)), url("{% static 'Imagenes/Fondo intro home.jpg'%}");
             background-size: cover;
-            height: inherit;
+            height: -webkit-fill-available;
         }
         .data-bg{
             background-image: url("{% static 'Imagenes/Textura claro.png'%}");
@@ -48,8 +49,13 @@
                     <li class="nav-link">
                         <a href="/" class="nav-item">Home</a>
                     </li>
-                    <li class="nav-link">
-                        <a href="/proyectos" class="nav-item">Proyectos</a>
+                    <li class="nav-link dropdown">
+                        <a href="/proyectos" class="nav-item dropbtn">Proyectos <i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
                     </li>
                     <li class="nav-link">
                         <a href="/nosotros" class="nav-item">Nosotros</a>
@@ -68,5 +74,29 @@
     </nav>
     {% block content %}
     {% endblock %}
+    <div class="container-footer">
+        <img class="imagen-logo img-grande" src="{% static 'Imagenes/Logo CSJ azul.png'%}" alt="CSJ Grupo Inmobiliario">
+        <div class="footer">
+            <div class="block-footer">
+                <div class="block-footer-subt">
+                    <h3 class="footer-subt">Contacto</h3>
+                    <div class="footer-divider"></div>
+                </div>
+                <div class="block-footer-info">
+                    <p><strong>Teléfono:</strong> 301 618 3674</p>
+                    <p><strong>Correo:</strong> secretaria@csjgrupoinmobiliaria.com</p>
+                </div>
+            </div>
+            <div class="block-footer">
+                <div class="block-footer-subt">
+                    <h3 class="footer-subt">Ubicación</h3>
+                    <div class="footer-divider"></div>
+                </div>
+                <div class="block-footer-info">
+                    <p><strong>Dirección:</strong> Indiana Mall, Km 17 Via las palmas, oficina 288.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
