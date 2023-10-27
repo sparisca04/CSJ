@@ -29,9 +29,8 @@ body {
     height: 100%;
 }
 .container-nosotros .text {
-    width: 45%;
-    padding: 20px;
-    background-color: #fff; /* meter la textura blanca */
+    width: 65%;
+    padding: 10px;
 }
 .container.reverse {
     flex-direction: row-reverse;
@@ -333,10 +332,11 @@ body {
 }
 
 .bifTitulosN {
-    font-size: 44px;
-    margin-top: 40px;
+    font-size: 75px;
+    margin-top: 110px;
     color: white;
     text-align: right;
+    margin-right: 150px;
 }
 
 .titulodeCuadroN {
@@ -348,23 +348,28 @@ body {
 
 .TextoN {
     font-size: 20px;
-    margin-top: 10px;
     text-align: justify;
+    color: #004763;
 }
+
 .sectionN {
-    text-align: center;
-    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .titleN {
-    font-size: 32px;
+    font-size: 72px;
     color: #004763;
     margin-bottom: 10px;
+    background-color: white;
 }
 
 .paragraphN {
-    font-size: 18px;
-    color: #333;
+    font-size: 35px;
+    color: white;
+    padding: 10px;
 }
 
 @media only screen and (max-width: 960px) {
@@ -431,3 +436,22 @@ body {
         margin-right: 10vw;
     }
 }
+@media only screen and (max-width: 650px) {
+  
+    .TextoN {
+      font-size: 20px; 
+    }
+    .paragraphN {
+        font-size: 15px;
+    }
+    .titleN {
+        font-size: 32px;
+    }
+  }
+  
+  @media only screen and (min-width: 651px) {
+    
+    .TextoN {
+      font-size: 35px; 
+    }
+  }
