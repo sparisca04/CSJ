@@ -2,15 +2,57 @@
 
 {% load static %}
 {% block content %}
-<div class="intro intro-bg">
-    <div>
-        <h1 class="intro-title">VIVE Y DISFRUTA<br>EL LUGAR QUE SOÑASTE</h1>
-        <div class="divider"></div>
+<div style="height: 100vh;">
+    <div class="fade intro-bg" style="display: block;" id="slide1">
+        <div class="intro">
+            <div>
+                <h1 class="intro-subtitle">VIVE Y DISFRUTA</h1>
+                <h1 class="intro-title">EL LUGAR QUE SOÑASTE</h1>
+                <div class="divider"></div>
+            </div>
+            <div class="container-contact">
+                <button class="contact" onclick="document.location='/proyectos'">
+                    Conoce Nuestros proyectos
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="container-contact">
-        <button class="contact" onclick="document.location='/proyectos'">
-            Conoce Nuestros proyectos
-        </button>
+    <div class="fade intro-bg" style="display: none;" id="slide2">
+        <div class="intro">
+            <div>
+                <h1 class="intro-title">Desarrolladores</h1>
+                <h1 class="intro-title">Ingeniería</h1>
+                <h1 class="intro-title">Diseño</h1>
+            </div>
+            <div class="container-contact">
+                <button class="contact" onclick="document.location='/proyectos'">
+                    Conoce Nuestros proyectos
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="fade intro-bg" style="display: none;" id="slide3">
+        <div class="intro">
+            <div>
+                <h1 class="intro-title">Promoción</h1>
+                <h1 class="intro-title">Arquitectura</h1>
+                <h1 class="intro-title">Gerencia</h1>
+                <h1 class="intro-title">Interventoría</h1>
+            </div>
+            <div class="container-contact">
+                <button class="contact" onclick="document.location='/proyectos'">
+                    Conoce Nuestros proyectos
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 </div>
 <div class="container-data data-bg">
@@ -23,8 +65,8 @@
         <img class="data-icon" src="{% static 'Imagenes/experiencia.png'%}" alt="">
     </div>
 </div>
-<div class="proyectos-bg">
-    <div style="text-align: center; padding-top: 80px"><h1 class="intro-title">Proyectos en ejecución</h1></div>
+<div>
+    <div style="text-align: center; padding-top: 80px"><h1 class="intro-title" style="color: black;">Proyectos en ejecución</h1></div>
     <div class="grid-proyectos">
         <div class="fila">
             <div class="col">
@@ -49,7 +91,7 @@
     </div>
 </div>
 <div class="container-footer">
-    <img class="imagen-logo img-grande" src="{% static 'Imagenes/Logo CSJ gris.png'%}" alt="CSJ Grupo Inmobiliario">
+    <img class="imagen-logo img-grande" src="{% static 'Imagenes/Logo CSJ azul.png'%}" alt="CSJ Grupo Inmobiliario">
     <div class="footer">
         <div class="block-footer">
             <div class="block-footer-subt">

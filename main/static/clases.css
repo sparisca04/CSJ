@@ -15,20 +15,20 @@ body {
     text-align: center;
     margin-top: 10px;
 }
-.container {
+.container-nosotros{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     background-color: #f2f2f2;
+    height: 100vh;
 }
-.container img {
+.container-nosotros img {
     max-width: 50%;
     object-fit: cover;
     height: 100%;
 }
-.container .text {
+.container-nosotros .text {
     width: 45%;
     padding: 20px;
     background-color: #fff; /* meter la textura blanca */
@@ -107,7 +107,7 @@ body {
 }
 .nav-item {
     border-radius: 40px;
-    color: #4DB0CB;
+    color: white;
     text-transform: uppercase;
     flex: 0 auto;
     padding: 15px;
@@ -138,9 +138,33 @@ body {
     min-height: 60px;
     height: 5vw;
     max-height: 145px;
-    justify-content: space-evenly;
-    margin-left: 15vw;
+    justify-content: flex-end;
+    margin-right: 3vw;
+    column-gap: 2vw;
 }
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+  
 .intro {
     height: 100vh;
     display: flex;
@@ -153,8 +177,15 @@ body {
 .intro-title {
     color: white;
     text-transform: uppercase;
-    font-size: max(2.5vw,28px);
+    font-size: max(2.5vw,26px);
     margin: 0px;
+}
+.intro-subtitle {
+    color: white;
+    text-transform: uppercase;
+    font-size: max(1.2vw,18px);
+    margin: 0px;
+    text-align: left;
 }
 .divider {
     height: 5px;
@@ -245,7 +276,7 @@ body {
     width: 100%;
     display: flex;
     min-height: 400px;
-    background-color: #6F6F73;
+    background-color: #004763;
 }
 .footer {
     padding: 5vw;
@@ -275,7 +306,54 @@ body {
 .block-footer-info {
     color: #D9D9DA;
 }
-  
+.overlayN {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity as needed */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    margin-right: 305px;
+    padding-top: 50px;
+}
+
+.bifTitulosN {
+    font-size: 44px;
+    margin-top: 40px;
+    color: white;
+    text-align: right;
+}
+
+.titulodeCuadroN {
+    font-size: 28px;
+    margin-top: 40px;
+    color: #004763;
+    text-align: center;
+}
+
+.TextoN {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: justify;
+}
+.sectionN {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titleN {
+    font-size: 32px;
+    color: #004763;
+    margin-bottom: 10px;
+}
+
+.paragraphN {
+    font-size: 18px;
+    color: #333;
+}
 
 @media only screen and (max-width: 960px) {
     .container-footer {
@@ -310,6 +388,7 @@ body {
     .navbar-container {
         justify-content: space-evenly;
         margin-left: 25vw;
+        margin-right: 0px;
     }
     .nav-link {
         padding: 5px;
