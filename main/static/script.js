@@ -17,47 +17,22 @@ window.onscroll = function(){
   }
 }
 
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+showSlides();
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+function showSlides() {
   let i;
-  let slide1 = document.getElementById("slide1");
-  let slide2 = document.getElementById("slide2");
-  let slide3 = document.getElementById("slide3");
+  let slides = document.getElementsByClassName("slide");
   let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  if (n > 3 || n == 1) {
-    slideIndex = 1;
-    slide1.style.display = "block";
-    slide2.style.display = "none";
-    slide3.style.display = "none";
-    dots[slideIndex-1].className += " active";
-  }
-  else if (n < 1 || n == 3) {
-    slideIndex = 3;
-    slide1.style.display = "none";
-    slide2.style.display = "none";
-    slide3.style.display = "block";
-    dots[slideIndex-1].className += " active";
-  }
-  else {
-    slideIndex = 2
-    slide1.style.display = "none";
-    slide2.style.display = "block";
-    slide3.style.display = "none";
-    dots[slideIndex-1].className += " active";
-  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }

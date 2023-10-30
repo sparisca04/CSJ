@@ -47,6 +47,7 @@ body {
     max-height: 145px;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 .container-fluid{
     display: flex;
@@ -250,8 +251,7 @@ body {
     position: absolute;
     width: auto;
     padding: 16px;
-    margin-top: -50px;
-    color: #ffffff9d;
+    color: white;
     font-weight: bold;
     font-size: 40px;
     border-radius: 0 3px 3px 0;
@@ -280,6 +280,14 @@ body {
 .active {
     background-color: #717171;
 }
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
 .slider1 {
     display: flex;
     flex-direction: column;
@@ -289,12 +297,21 @@ body {
 .carrusel-proyectos {
     display: flex;
     justify-content: center;
-    height: 40vw;
-    min-height: 500px;
+    height: 30vw;
+    min-height: 470px;
 }
 .slide {
     width: 100%;
+    transition: opacity 1s ease;
 }
+.fondo-logo-slide {
+    background-color: white;
+    width: 30vw;
+    min-width: 223px;
+    max-width: 300px;
+    border-bottom-right-radius: 80px;
+}
+
 .grid-proyectos {
     min-height: 100vh;
     padding: 8vw;
