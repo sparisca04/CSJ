@@ -424,6 +424,30 @@ body {
     display: flex;
     padding-top: max(5vw, 60px);
 }
+.logo-proyecto {
+    width: 300px;
+}
+.info-proyecto {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+}
+.vis {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4DB0CB;
+    display: flex;
+    position: fixed;
+    right: 30%;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #004763;
+    margin: 20px;
+    font-size: x-large;
+}
 .overlayN {
     top: 0;
     left: 0;
