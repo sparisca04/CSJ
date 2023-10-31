@@ -299,7 +299,7 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 10px 5%;
-    height: 30vw;
+    height: 40vw;
     min-height: 470px;
 }
 .carrusel-proyectos {
@@ -535,6 +535,9 @@ body {
   }
 
 @media only screen and (max-width: 960px) {
+    .info-proyecto {
+        width: 100%;
+    }
     .container-proyecto {
         flex-direction: column;
     }
