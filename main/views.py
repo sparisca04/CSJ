@@ -13,3 +13,6 @@ def nosotros(request):
 
 def contact(request):
     return render(request, "main/contact.html")
+
+def proyecto(request):
+    return render(request, "main/proyecto.html")

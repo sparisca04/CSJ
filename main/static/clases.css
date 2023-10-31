@@ -267,6 +267,12 @@ body {
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+.dots {
+    text-align:center;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+}
 .dot {
     height: 15px;
     width: 15px;
@@ -293,16 +299,17 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 10px 5%;
+    height: 30vw;
+    min-height: 470px;
 }
 .carrusel-proyectos {
     display: flex;
     justify-content: center;
-    height: 30vw;
-    min-height: 470px;
+    height: 100%;
 }
 .slide {
     width: 100%;
-    transition: opacity 1s ease;
+    display: none;
 }
 .fondo-logo-slide {
     background-color: white;
@@ -406,6 +413,17 @@ body {
 .block-footer-info {
     color: #D9D9DA;
 }
+.slider2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: calc(100vh - max(5vw,60px));
+}
+.container-proyecto {
+    display: flex;
+    padding-top: max(5vw, 60px);
+}
 .overlayN {
     top: 0;
     left: 0;
@@ -462,6 +480,16 @@ body {
 }
 
 @media only screen and (max-width: 960px) {
+    .container-proyecto {
+        flex-direction: column;
+    }
+    .slider2 {
+        width: 100%;
+    }
+    .dots {
+        left: 0;
+        right: 0;
+    }
     .container-footer {
         flex-direction: column;
     }
