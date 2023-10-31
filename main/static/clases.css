@@ -351,8 +351,8 @@ body {
     align-items: center;
 }
 .data-icon {
-    width: 10vw;
-    min-width: 100px;
+    width: 6vw;
+    min-width: 60px;
 }
 .data-text {
     text-align: center;
@@ -478,6 +478,37 @@ body {
     color: white;
     padding: 10px;
 }
+.contadores-principales {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .texto-contador {
+    font-size: 20px;
+    text-align: center;
+    color: #004763;
+  }
+  .disguise {
+    opacity: 0;
+  }
+  
+  .animate {
+    animation: appear 1.3s ease;
+  }
+  .contador {
+    width: 24.7%;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .contador-cantidad {
+    font-size: 50px;
+    margin: 10px 0;
+    font-weight: 900;
+    color: #004763;
+  }
 
 @media only screen and (max-width: 960px) {
     .container-proyecto {
