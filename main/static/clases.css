@@ -423,6 +423,7 @@ body {
 .container-proyecto {
     display: flex;
     padding-top: max(5vw, 60px);
+    height: calc(100vh - max(5vw,60px));
 }
 .logo-proyecto {
     width: 300px;
@@ -431,6 +432,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 30%;
+    height: 100%;
     align-items: center;
 }
 .vis {
@@ -508,12 +510,14 @@ body {
     color: white;
     font-family: Arial, sans-serif;
     padding: 20px;
-  }
-  .texto-contador {
+    flex-wrap: wrap;
+}
+.texto-contador {
     font-size: 20px;
     text-align: center;
     color: #004763;
-  }
+    text-transform: uppercase;
+}
   .disguise {
     opacity: 0;
   }
@@ -522,7 +526,7 @@ body {
     animation: appear 1.3s ease;
   }
   .contador {
-    width: 24.7%;
+    margin: 30px;
     text-align: center;
     display: inline-block;
   }
