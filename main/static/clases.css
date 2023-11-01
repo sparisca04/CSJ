@@ -321,21 +321,21 @@ body {
 
 .grid-proyectos {
     min-height: 100vh;
-    padding: 8vw;
+    padding: 1vw;
     padding-top: 30px;
 }
 .fila {
     height: 25vw;
-    padding: 40px 0px;
+    padding: 10px 0px;
     display: flex;
     justify-content: space-around;
 }
 .col {
-    width: 40%;
+    width: 49%;
     min-width: 300px;
     background-color: #6F6F73;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 1px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -529,6 +529,7 @@ body {
     margin: 30px;
     text-align: center;
     display: inline-block;
+    color: #004763;
   }
   
   .contador-cantidad {

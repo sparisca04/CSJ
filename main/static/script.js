@@ -25,15 +25,15 @@ addEventListener("DOMContentLoaded", () => {
         let cantidad_maxima = +contador.dataset.cantidadTotal,
           valor_actual = +contador.innerText,
           incremento = cantidad_maxima / velocidad;
-    
-          if(valor_actual <cantidad_maxima) {
-            contador.innerText = Math.ceil(valor_actual + incremento);
-            setTimeout(actualizar_contador, 5);
-          } else {
-            contador.innerText = cantidad_maxima;
-          }
+      
+        if(valor_actual < cantidad_maxima) {
+          contador.innerText = Math.ceil(valor_actual + incremento);
+          setTimeout(actualizar_contador, 5);
+        } else {
+          contador.innerText = "+" + cantidad_maxima;
+        }
       }
-      actualizar_contador();
+      "+" + actualizar_contador();
     }
   }
  
