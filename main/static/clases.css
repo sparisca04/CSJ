@@ -329,20 +329,24 @@ body {
     padding-top: 30px;
 }
 .fila {
-    height: 25vw;
     padding: 10px 0px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 30px;
 }
 .col {
-    width: 49%;
-    min-width: 300px;
+    width: 250px;
+    height: 350px;
     background-color: #6F6F73;
     text-align: center;
     border-radius: 1px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    text-decoration: none;
+    color: black;
 }
 .container-data {
     display: flex;
