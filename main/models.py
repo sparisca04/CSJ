@@ -1,6 +1,4 @@
 from django.db import models
-from galleryfield.fields import GalleryField
-
 
 # Create your models here.
 

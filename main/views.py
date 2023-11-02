@@ -8,7 +8,8 @@ def home(request):
     return render(request, "main/home.html", {'proyectos': proyectos})
 
 def proyectos(request):
-    return render(request, "main/proyectos.html")
+    proyectos = Proyecto.objects.all()
+    return render(request, "main/proyectos.html", {'proyectos': proyectos})
 
 def nosotros(request):
     return render(request, "main/nosotros.html")
