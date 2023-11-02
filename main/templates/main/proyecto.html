@@ -6,11 +6,11 @@
 <div class="container-proyecto">
     <div class="slider2">
         <div class="carrusel-proyectos">
-            <div class="slide fade slide1">
+            <div class="slide fade" style="background-image: url('{{ proyecto.imagen1.url }}');">
             </div> 
-            <div class="slide fade slide2">
+            <div class="slide fade" style="background-image: url('{{ proyecto.imagen2.url }}');">
             </div>
-            <div class="slide fade slide3">
+            <div class="slide fade" style="background-image: url('{{ proyecto.imagen3.url }}');">
             </div>
         </div>
         <div class="dots">
@@ -61,29 +61,27 @@
         </script>
     </div>
     <div class="info-proyecto">
+        {% if proyecto.is_vis %}
         <div class="vis">VIS</div>
-        <a href="https://villaromeracampestre.com/" target="_blank"><img class="logo-proyecto" src="{% static 'Imagenes/Logo VR.png' %}" alt=""></a>
+        {% endif %}
+        <a href="{{ proyecto.site_url }}" target="_blank"><img class="logo-proyecto" src="{{ proyecto.logo.url }}" alt=""></a>
         <div style="width: 100%;">
-            <div style="padding: 0px 30px; color: #004763;">
-                <h2>Etapa 1 - Villa Romera Campestre</h2>
+            <div style="padding: 0px 30px; color: #004763; text-align: center;">
+                <h2>{{proyecto.nombre}}</h2>
                 <div style="display: flex; column-gap: 20px;">
-                    <div>
-                        <p><strong>Área construida:</strong> 34.500m<sup>2</sup></p>
-                        <p>3 torres de apartamentos</p>
-                        <p>600 apartamentos</p>
-                        <p>8 apartamentos por piso</p>
-                        <p>25 pisos por torre</p>
+                    <div style="width: 50%;">
+                        <p><strong>Área construida:</strong></p>
+                        <p class="texto-proyecto">{{proyecto.areaConstruida|linebreaksbr}}</p>
                     </div>
-                    <div>
-                        <p><strong>Urbanismo:</strong> 10.350m<sup>2</sup></p>
-                        <p>Vías, andenes, piscinas, portería, salón social.</p>
-                        <p><strong>Estado:</strong> Entregado</p>
-                        <p><strong>Ubicación:</strong> Sabaneta, Maria Auxiliadora.</p>
+                    <div style="width: 50%;">
+                        <p><strong>Urbanismo:</strong></p>
+                        <p class="texto-proyecto">{{proyecto.areaConstruidaUrbanismo|linebreaksbr}}</p>
                     </div>
                 </div>
             </div>
             <div style="display: flex; column-gap: 10px; justify-content: center;">
-                <a href="https://www.instagram.com/villaromeracampestreoficial/?igshid=YmMyMTA2M2Y%3D" target="_blank">
+                {% if proyecto.ig_url %}
+                <a href="{{ proyecto.ig_url }}" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px">
                         <radialGradient id="yOrnnhliCrdS2gy~4tD8ma" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse">
                             <stop offset="0" stop-color="#fd5"/>
@@ -103,7 +101,9 @@
                         <path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"/>
                     </svg>
                 </a>
-                <a href="https://facebook.com/comunicaciones.villaromeracampestre?mibextid=LQQJ4d" target="_blank">
+                {% endif %}
+                {% if proyecto.fb_url %}
+                <a href="{{ proyecto.fb_url }}" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px">
                         <linearGradient id="CXanuwD9EGkBgTn76_1mxa" x1="9.993" x2="40.615" y1="-299.993" y2="-330.615" gradientTransform="matrix(1 0 0 -1 0 -290)" gradientUnits="userSpaceOnUse">
                             <stop offset="0" stop-color="#2aa4f4"/><stop offset="1" stop-color="#007ad9"/>
@@ -114,7 +114,9 @@
                         <path fill="#fff" d="M26.707,29.301h5.176l0.813-5.258h-5.989v-2.874c0-2.184,0.714-4.121,2.757-4.121h3.283V12.46	c-0.577-0.078-1.797-0.248-4.102-0.248c-4.814,0-7.636,2.542-7.636,8.334v3.498H16.06v5.258h4.948v14.475	C21.988,43.923,22.981,44,24,44c0.921,0,1.82-0.062,2.707-0.182V29.301z"/>
                     </svg>
                 </a>
-                <a href="https://www.tiktok.com/@villaromeracampestre" target="_blank">
+                {% endif %}
+                {% if proyecto.tiktok_url %}
+                <a href="{{ proyecto.tiktok_url }}" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px" clip-rule="evenodd">
                         <linearGradient id="dYJkfAQNfP2dCzgdw4ruIa" x1="23.672" x2="23.672" y1="6.365" y2="42.252" gradientTransform="translate(.305 -.206)" gradientUnits="userSpaceOnUse">
                             <stop offset="0" stop-color="#4c4c4c"/><stop offset="1" stop-color="#343434"/>
@@ -125,20 +127,10 @@
                         <path fill="#81d4fa" fill-rule="evenodd" d="M33.626,18.262v-0.854c-1.05,0.002-2.078-0.292-2.969-0.848	C31.445,17.423,32.483,18.018,33.626,18.262z M28.095,12.772c-0.027-0.153-0.047-0.306-0.061-0.461v-0.516h-4.036v16.019	c-0.006,1.867-1.523,3.379-3.393,3.379c-0.549,0-1.067-0.13-1.526-0.362c0.62,0.813,1.599,1.338,2.701,1.338	c1.87,0,3.386-1.512,3.393-3.379V12.772H28.095z M21.635,21.38v-0.909c-0.337-0.046-0.677-0.069-1.018-0.069	c-4.097,0-7.417,3.319-7.417,7.413c0,2.567,1.305,4.829,3.288,6.159c-1.308-1.336-2.114-3.165-2.114-5.183	C14.374,24.749,17.611,21.463,21.635,21.38z" clip-rule="evenodd"/>
                     </svg>
                 </a>
+                {% endif %}
             </div>
-            <div id="googleMap" style="width:100%;height:400px;"></div>
-
-            <script>
-                function myMap() {
-                var mapProp= {
-                center:new google.maps.LatLng(51.508742,-0.120850),
-                zoom:5,
-                };
-                var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-                }
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3922.6787360663748!2d-75.60054126167819!3d6.1519736384694585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1698880087616!5m2!1ses!2sco" style="border:0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
 

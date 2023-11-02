@@ -5,15 +5,35 @@ from galleryfield.fields import GalleryField
 # Create your models here.
 
 class Proyecto(models.Model):
-    Imagen1 = models.ImageField(null=True, blank=True, upload_to='static/Imagenes/Proyectos')
-    Imagen2 = models.ImageField(null=True, blank=True, upload_to='static/Imagenes/Proyectos')
-    Imagen3 = models.ImageField(null=True, blank=True, upload_to='static/Imagenes/Proyectos')
-    Logo = models.ImageField(null=True, blank=True, upload_to='static/Imagenes/Proyectos')
+    ESTADOS = (
+        ("Entregado", "Entregado"),
+        ("En construcción", "En construcción"),
+        ("Lanzamiento", "Lanzamiento")
+    )
+
+    imagen1 = models.ImageField(null=True, blank=True, upload_to='Proyectos')
+    imagen2 = models.ImageField(null=True, blank=True, upload_to='Proyectos')
+    imagen3 = models.ImageField(null=True, blank=True, upload_to='Proyectos')
+    logo = models.ImageField(null=True, blank=True, upload_to='Proyectos')
     nombre = models.TextField(max_length=50)
-    areaConstruida = models.TextField(max_length=100)
+    is_vis = models.BooleanField(default=False)
+    areaConstruida = models.TextField(max_length=150)
     areaConstruidaUrbanismo = models.TextField(max_length=100)
-    estado = models.TextField(max_length=20)
+    estado = models.CharField(max_length=50, choices=ESTADOS)
     ubicacion = models.TextField(max_length=50)
+    site_url = models.CharField(max_length=200, null=True, blank=True)
     ig_url = models.CharField(max_length=200, null=True, blank=True)
     fb_url = models.CharField(max_length=200, null=True, blank=True)
     tiktok_url = models.CharField(max_length=200, null=True, blank=True)
+
+    def __str__(self):
+        return self.nombre
+
+class ProyectoDestacado(models.Model):
+    imagen = models.ImageField(null=True, blank=True, upload_to='Carrusel Destacados')
+    logo = models.ImageField(null=True, blank=True, upload_to='Carrusel Destacados')
+    site_url = models.CharField(max_length=200, null=True, blank=True)
+    nombre = models.TextField(max_length=50)
+
+    def __str__(self):
+        return self.nombre

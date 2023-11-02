@@ -68,6 +68,7 @@ body {
     background-color: white;
     margin-bottom: max(2vw, 20px);
     border-bottom-right-radius: max(6vw, 35px);
+    box-shadow: -3px 4px 3px 4px rgba(0,0,0,0.2);
     position: fixed;
     transition: width 0.5s;
 }
@@ -310,6 +311,8 @@ body {
 .slide {
     width: 100%;
     display: none;
+    background-position: center;
+    background-size: cover;
 }
 .fondo-logo-slide {
     background-color: white;
@@ -317,6 +320,7 @@ body {
     min-width: 223px;
     max-width: 300px;
     border-bottom-right-radius: 80px;
+    padding: 15px;
 }
 
 .grid-proyectos {
@@ -419,6 +423,8 @@ body {
     justify-content: center;
     width: 70%;
     height: calc(100vh - max(5vw,60px));
+    background-size: cover;
+    background-position: center;
 }
 .container-proyecto {
     display: flex;
@@ -434,6 +440,9 @@ body {
     width: 30%;
     height: 100%;
     align-items: center;
+}
+.texto-proyecto {
+    line-height: 1.5;
 }
 .vis {
     width: 60px;

@@ -1,9 +1,11 @@
 from django.http import HttpResponse,JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import Proyecto, ProyectoDestacado
 
 # Create your views here.
 def home(request):
-    return render(request,"main/home.html")
+    proyectos = ProyectoDestacado.objects.all()
+    return render(request, "main/home.html", {'proyectos': proyectos})
 
 def proyectos(request):
     return render(request, "main/proyectos.html")
@@ -14,5 +16,6 @@ def nosotros(request):
 def contact(request):
     return render(request, "main/contact.html")
 
-def proyecto(request):
-    return render(request, "main/proyecto.html")
+def proyecto(request, id):
+    proyecto = get_object_or_404(Proyecto, id=id)
+    return render(request, "main/proyecto.html", {'proyecto':proyecto})

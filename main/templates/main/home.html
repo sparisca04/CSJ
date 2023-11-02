@@ -57,15 +57,13 @@
     </div>
     <div class="slider1">
         <div class="carrusel-proyectos">
-            <a class="slide fade slide1" href="https://villaromeracampestre.com" target="_blank">
+            {% for proyecto in proyectos %}
+            <a style="background-image: url('{{ proyecto.imagen.url }}'); background-position: top;" class="slide fade" href="{{ proyecto.site_url }}" target="_blank">
                 <div class="fondo-logo-slide">
-                    <img style="width: 100%;" src="{% static 'Imagenes/Logo VR.png' %}" alt="">
+                    <img style="width: 100%;" src="{{ proyecto.logo.url }}" alt="">
                 </div>
-            </a> 
-            <div class="slide fade slide2">
-            </div>
-            <div class="slide fade slide3">
-            </div>
+            </a>
+            {% endfor %}
         </div>
         <br>
         <div style="text-align:center">
