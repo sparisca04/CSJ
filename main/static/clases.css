@@ -271,7 +271,6 @@ body {
 .dots {
     text-align:center;
     position: absolute;
-    bottom: 0;
     left: 30%;
 }
 .dot {
@@ -337,8 +336,8 @@ body {
     column-gap: 30px;
 }
 .col {
-    width: 250px;
-    height: 350px;
+    width: 400px;
+    height: 550px;
     background-color: #6F6F73;
     text-align: center;
     border-radius: 1px;
@@ -439,7 +438,7 @@ body {
 .slider2 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     width: 70%;
     height: calc(100vh - max(5vw,60px));
     background-size: cover;
@@ -449,6 +448,12 @@ body {
     display: flex;
     padding-top: max(5vw, 60px);
     height: calc(100vh - max(5vw,60px));
+}
+.link-logo-proyecto {
+    border-radius: 100px;
+    border: 2px solid #004763;
+    padding: 10px;
+    margin-top: 20px;
 }
 .logo-proyecto {
     width: 300px;
@@ -567,7 +572,17 @@ body {
     color: #004763;
   }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1060px) {
+    .slider2 {
+        height: calc(70vh - max(5vw,60px));;
+    }
+    .container-proyecto {
+        height: unset;
+    }
+    .vis {
+        right: 0;
+        top: 7%;
+    }
     .info-proyecto {
         width: 100%;
     }
