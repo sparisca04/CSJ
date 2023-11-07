@@ -21,7 +21,11 @@ body {
     justify-content: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     background-color: #f2f2f2;
-    height: 100vh;
+    height: 70vh;
+}
+.container-separador{
+    height: 30vh;
+    background-color: #004763;
 }
 .container-nosotros img {
     max-width: 50%;
@@ -59,6 +63,11 @@ body {
     visibility: hidden;
     opacity: 0;
 }
+.hr {
+    height: 10px;
+    border-style: solid;
+    border-color: #004763;
+  }
 .link-logo{
     width: 18vw;
     min-width: 4cm;
@@ -323,6 +332,7 @@ body {
     min-height: 100vh;
     padding: 1vw;
     padding-top: 30px;
+    margin-left: 100px;
 }
 .fila {
     height: 25vw;
