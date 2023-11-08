@@ -6,7 +6,7 @@
     <div class="intro intro-bg">
         <div>
             <h1 class="intro-subtitle">VIVE Y DISFRUTA</h1>
-            <h1 class="intro-title">EL LUGAR QUE SOÑASTE</h1>
+            <h1 class="intro-title" style="margin: 0px;">EL LUGAR QUE SOÑASTE</h1>
             <div class="divider"></div>
         </div>
         <div class="container-contact">
@@ -22,11 +22,13 @@
         <img class="data-icon" src="{% static 'Imagenes/metros.png'%}" alt="">
         <div class="contador-cantidad" data-cantidad-total="2000">0</div>
         <h2 class="texto-contador">viviendas entregadas</h2>
+        <div class="divider"></div>
     </div>
     <div class="contador disguise">
         <img class="data-icon" src="{% static 'Imagenes/metros.png'%}" alt="">
         <div class="contador-cantidad" data-cantidad-total="100000">0</div>
         <h2 class="texto-contador">m<sup>2</sup> construidos</h2>
+        <div class="divider"></div>
     </div>
     <div class="contador disguise">
         <img class="data-icon" src="{% static 'Imagenes/metros.png'%}" alt="">
@@ -34,78 +36,68 @@
             0
         </div>
         <h2 class="texto-contador">m<sup>2</sup> de urbanismo <br> y zonas comunes</h2>
+        <div class="divider"></div>
     </div>
     <div class="contador disguise">
         <img class="data-icon" src="{% static 'Imagenes/metros.png'%}" alt="">
         <div class="contador-cantidad" data-cantidad-total="560">0</div>
         <h2 class="texto-contador">m<sup>2</sup> de comercio</h2>
+        <div class="divider"></div>
     </div>
   </section>
 <div class="container-divider"></div>
 <div style="padding: 50px 0px;">
     <div style="text-align: center">
-        <h1 class="intro-title" style="color: #096B8C;">Proyectos Destacados</h1>
+        <h1 class="intro-title" style="color: #096B8C; text-shadow: 2px 2px 3px #0000005e;">nuestros proyectos</h1>
     </div>
     <div class="slider1">
         <div class="carrusel-proyectos">
             {% for proyecto in proyectos %}
-            <a style="background-image: url('{{ proyecto.imagen.url }}'); background-position: top;" class="slide" href="{{ proyecto.site_url }}" target="_blank">
+            <a style="background-image: url('{{ proyecto.imagen.url }}'); background-position: top;" class="slide fade" href="{{ proyecto.site_url }}" target="_blank">
+                {% if proyecto.logo %}
                 <div class="fondo-logo-slide">
                     <img style="width: 100%;" src="{{ proyecto.logo.url }}" alt="">
                 </div>
+                {% endif %}
             </a>
             {% endfor %}
-        </div>
-        <br>
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <script>
             let slideIndex = 0;
-            showSlidesAuto();
-            
-            function currentSlide(n) {
-                slideIndex = n; 
-                showSlides();
+            showSlides(slideIndex);
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
             }
-            function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
-            }
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("slide");
+                if (n >= slides.length) {slideIndex = 0}
+                if (n < 0) {slideIndex = slides.length-1}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].classList.remove('slide1');
+                    slides[i].classList.remove('slide2'); 
+                    slides[i].classList.remove('slide3'); 
+                }
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                slides[slideIndex].classList.add('slide1');
 
-            function showSlidesAuto() {
-            let i;
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
-            setTimeout(showSlidesAuto, 6000);
+                if (slideIndex == slides.length-2) {
+                    slides[slideIndex+1].classList.add('slide2');
+                    slides[0].classList.add('slide3');
+                } else if (slideIndex == slides.length-1) {
+                    slides[0].classList.add('slide2');
+                    slides[1].classList.add('slide3');
+                } else {
+                    slides[slideIndex+1].classList.add('slide2');
+                    slides[slideIndex+2].classList.add('slide3');
+                }
             }
         </script>
     </div>
 </div>
-<div class="container-atributos nosotros-bg2">
+<div class="container-atributos">
     <div class="atributo">Soluciones de ingeniería</div>
     <div class="atributo">Arquitectura</div>
     <div class="atributo">Diseño</div>

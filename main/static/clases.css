@@ -21,7 +21,11 @@ body {
     justify-content: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     background-color: #f2f2f2;
-    height: 100vh;
+    height: 70vh;
+}
+.container-separador{
+    height: 30vh;
+    background-color: #004763;
 }
 .container-nosotros img {
     max-width: 50%;
@@ -58,6 +62,11 @@ body {
     position: fixed !important;
     visibility: hidden;
     opacity: 0;
+}
+.hr {
+    height: 10px;
+    border-style: solid;
+    border-color: #004763;
 }
 .link-logo{
     width: 18vw;
@@ -191,7 +200,6 @@ body {
     color: white;
     text-transform: uppercase;
     font-size: max(2.5vw,26px);
-    margin: 0px;
 }
 .intro-subtitle {
     color: white;
@@ -226,47 +234,48 @@ body {
     cursor: pointer;
 }
 .container-atributos {
-    height: 80vh;
     padding: 5vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .atributo {
-    width: fit-content;
-    height: fit-content;
-    color: #004763;
-    font-size: max(3vw,28px);
-    transition: color 0.6s ease, box-shadow 0.6s ease;
+    width: 12vw;
+    height: 12vw;
+    min-width: 100px;
+    min-height: 100px;
+    color: white;
+    background-color: #004763;
+    border-radius: 25px;
     text-transform: uppercase;
-    padding: 20px 50px;
-    margin: 0px 50px;
+    padding: 10px;
+    margin: 4vw;
     text-align: center;
+
 }
 .atributo:hover {
     color: #00476391;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .prev, .next {
+    align-self: center;
+    left: 10px;
     cursor: pointer;
     position: absolute;
     width: auto;
-    padding: 16px;
-    color: white;
     font-weight: bold;
-    font-size: 40px;
-    border-radius: 0 3px 3px 0;
+    font-size: 4vw;
+    border-radius: 3px;
     user-select: none;
     -webkit-user-select: none;
     mix-blend-mode: exclusion;
 }
 .next {
-    border-radius: 3px 0 0 3px;
-    align-self: flex-end;
+    right: 10px;
+    left: auto;
 }
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(82, 82, 82, 0.8);
 }
 .dots {
     text-align:center;
@@ -288,19 +297,19 @@ body {
 }
 .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: .5s;
 }
 @keyframes fade {
-    from {opacity: .4} 
+    from {opacity: 0} 
     to {opacity: 1}
 }
 .slider1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px 5%;
+    padding: 10px;
     height: 40vw;
-    min-height: 470px;
+    min-height: 150px;
 }
 .carrusel-proyectos {
     display: flex;
@@ -308,15 +317,34 @@ body {
     height: 100%;
 }
 .slide {
-    width: 100%;
+    position: absolute;
+    height: 38vw;
+    min-height: 163px;
+    width: 25%;
+    min-width: 100px;
     display: none;
+    opacity: 0;
     background-position: center;
     background-size: cover;
 }
+.slide1, .slide2, .slide3 {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%);
+    transition: left 0.3s;
+}
+.slide1 {
+    left: 20%;
+}
+.slide2 {
+    left: 50%;
+}
+.slide3{
+    left: 80%;
+}
 .fondo-logo-slide {
     background-color: white;
-    width: 30vw;
-    min-width: 223px;
+    width: 50%;
     max-width: 300px;
     border-bottom-right-radius: 80px;
     padding: 15px;
@@ -326,6 +354,7 @@ body {
     min-height: 100vh;
     padding: 1vw;
     padding-top: 30px;
+    margin-left: 100px;
 }
 .fila {
     padding: 10px 0px;
@@ -550,6 +579,7 @@ body {
     text-align: center;
     color: #004763;
     text-transform: uppercase;
+    margin: 0px;
 }
   .disguise {
     opacity: 0;
@@ -559,14 +589,14 @@ body {
     animation: appear 1.3s ease;
   }
   .contador {
-    margin: 30px;
+    margin: 10px;
     text-align: center;
     display: inline-block;
     color: #004763;
   }
   
   .contador-cantidad {
-    font-size: 50px;
+    font-size: max(3.5vw, 20px);
     margin: 10px 0;
     font-weight: 900;
     color: #004763;
@@ -660,7 +690,6 @@ body {
     }
 }
 @media only screen and (max-width: 650px) {
-  
     .TextoN {
       font-size: 20px; 
     }
