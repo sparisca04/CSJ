@@ -53,7 +53,7 @@
     <div class="slider1">
         <div class="carrusel-proyectos">
             {% for proyecto in proyectos %}
-            <a style="background-image: url('{{ proyecto.imagen.url }}'); background-position: top;" class="slide fade" href="{{ proyecto.site_url }}" target="_blank">
+            <a style="background-image: url('{{ proyecto.imagen.url }}'); background-position: top;" class="slide-c1 fade" href="{{ proyecto.site_url }}" target="_blank">
                 {% if proyecto.logo %}
                 <div class="fondo-logo-slide">
                     <img style="width: 100%;" src="{{ proyecto.logo.url }}" alt="">
@@ -72,7 +72,7 @@
             }
             function showSlides(n) {
                 let i;
-                let slides = document.getElementsByClassName("slide");
+                let slides = document.getElementsByClassName("slide-c1");
                 if (n >= slides.length) {slideIndex = 0}
                 if (n < 0) {slideIndex = slides.length-1}
                 for (i = 0; i < slides.length; i++) {

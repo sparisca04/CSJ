@@ -316,7 +316,7 @@ body {
     justify-content: center;
     height: 100%;
 }
-.slide {
+.slide-c1 {
     position: absolute;
     height: 38vw;
     min-height: 163px;
@@ -473,19 +473,30 @@ body {
     background-size: cover;
     background-position: center;
 }
+.slide-c2 {
+    width: 100%;
+    display: none;
+    background-position: center;
+    background-size: cover;
+}
 .container-proyecto {
     display: flex;
     padding-top: max(5vw, 60px);
     height: calc(100vh - max(5vw,60px));
 }
 .link-logo-proyecto {
-    border-radius: 100px;
-    border: 2px solid #004763;
     padding: 10px;
     margin-top: 20px;
 }
 .logo-proyecto {
     width: 300px;
+}
+.ir-sitio-web {
+    background-color: #004763;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
 }
 .info-proyecto {
     display: flex;
