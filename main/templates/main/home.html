@@ -46,19 +46,19 @@
     </div>
   </section>
 <div class="container-divider"></div>
-<div style="padding: 50px 0px;">
+<div style="padding: 20px 0px;">
     <div style="text-align: center">
         <h1 class="intro-title" style="color: #096B8C; text-shadow: 2px 2px 3px #0000005e;">nuestros proyectos</h1>
     </div>
     <div class="slider1">
         <div class="carrusel-proyectos">
             {% for proyecto in proyectos %}
-            <a style="background-image: url('{{ proyecto.imagen.url }}'); background-position: top;" class="slide-c1 fade" href="{{ proyecto.site_url }}" target="_blank">
-                {% if proyecto.logo %}
+            <a class="slide-c1 fade" href="{{ proyecto.site_url }}" target="_blank">
                 <div class="fondo-logo-slide">
                     <img style="width: 100%;" src="{{ proyecto.logo.url }}" alt="">
                 </div>
-                {% endif %}
+                <div class="img-slide" style="background-image: url('{{ proyecto.imagen.url }}');"></div>
+                <h2 class="slide-c1-footer" style="background-color: {{ proyecto.color }};">{{ proyecto.estado }}</h2>
             </a>
             {% endfor %}
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -79,27 +79,50 @@
                     slides[i].classList.remove('slide1');
                     slides[i].classList.remove('slide2'); 
                     slides[i].classList.remove('slide3'); 
+                    slides[i].classList.remove('slide4'); 
+                    slides[i].classList.remove('slide5'); 
                 }
                 if (slideIndex > slides.length) {slideIndex = 1}    
                 slides[slideIndex].classList.add('slide1');
-
-                if (slideIndex == slides.length-2) {
+                if (slideIndex == slides.length-4) {
+                    slides[slideIndex+1].classList.add('slide2');
+                    slides[slideIndex+2].classList.add('slide3');
+                    slides[slideIndex+3].classList.add('slide4');
+                    slides[0].classList.add('slide5');
+                } else if (slideIndex == slides.length-3) {
+                    slides[slideIndex+1].classList.add('slide2');
+                    slides[slideIndex+2].classList.add('slide3');
+                    slides[0].classList.add('slide4');
+                    slides[1].classList.add('slide5');
+                } else if (slideIndex == slides.length-2) {
                     slides[slideIndex+1].classList.add('slide2');
                     slides[0].classList.add('slide3');
+                    slides[1].classList.add('slide4');
+                    slides[2].classList.add('slide5');
                 } else if (slideIndex == slides.length-1) {
                     slides[0].classList.add('slide2');
                     slides[1].classList.add('slide3');
+                    slides[2].classList.add('slide4');
+                    slides[3].classList.add('slide5');
                 } else {
                     slides[slideIndex+1].classList.add('slide2');
                     slides[slideIndex+2].classList.add('slide3');
+                    slides[slideIndex+3].classList.add('slide4');
+                    slides[slideIndex+4].classList.add('slide5');
                 }
             }
         </script>
     </div>
 </div>
 <div class="container-atributos">
-    <div class="atributo">Soluciones de ingeniería</div>
-    <div class="atributo">Arquitectura</div>
+    <div class="atributo">
+        <img class="img-atributo" src="{% static 'Imagenes/Ingenieria.png' %}" alt="">
+        Ingeniería
+    </div>
+    <div class="atributo">
+        <img class="img-atributo" src="{% static 'Imagenes/Arquitectura.png' %}" alt="">
+        Arquitectura
+    </div>
     <div class="atributo">Diseño</div>
     <div class="atributo">Innovación</div>
     <div class="atributo">Consultoría</div>

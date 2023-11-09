@@ -31,6 +31,8 @@ class ProyectoDestacado(models.Model):
     imagen = models.ImageField(null=True, blank=True, upload_to='Carrusel Destacados')
     logo = models.ImageField(null=True, blank=True, upload_to='Carrusel Destacados')
     site_url = models.CharField(max_length=200, null=True, blank=True)
+    estado = models.CharField(max_length=50, default='¡Últimas unidades!')
+    color = models.CharField(max_length=50, default='#004763')
     nombre = models.TextField(max_length=50)
 
     def __str__(self):

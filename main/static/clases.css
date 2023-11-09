@@ -234,27 +234,34 @@ body {
     cursor: pointer;
 }
 .container-atributos {
-    padding: 5vw;
+    padding: 2vw 5vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+.img-atributo {
+    width: 60%;
+}
 .atributo {
-    width: 12vw;
-    height: 12vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 10vw;
+    height: 10vw;
     min-width: 100px;
     min-height: 100px;
     color: white;
     background-color: #004763;
-    border-radius: 25px;
+    border: double;
+    border-width: 10px;
+    border-color: white;
+    border-radius: 30px;
     text-transform: uppercase;
     padding: 10px;
     margin: 4vw;
     text-align: center;
 
-}
-.atributo:hover {
-    color: #00476391;
 }
 .prev, .next {
     align-self: center;
@@ -275,7 +282,7 @@ body {
 }
 .prev:hover,
 .next:hover {
-  background-color: rgba(82, 82, 82, 0.8);
+  color: #4DB0CB;
 }
 .dots {
     text-align:center;
@@ -308,8 +315,8 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 10px;
-    height: 40vw;
-    min-height: 150px;
+    height: 35vw;
+    min-height: 220px;
 }
 .carrusel-proyectos {
     display: flex;
@@ -318,38 +325,59 @@ body {
 }
 .slide-c1 {
     position: absolute;
-    height: 38vw;
-    min-height: 163px;
-    width: 25%;
+    height: 30vw;
+    min-height: 220px;
+    width: 15%;
     min-width: 100px;
     display: none;
+    text-decoration: none;
     opacity: 0;
     background-position: center;
     background-size: cover;
 }
-.slide1, .slide2, .slide3 {
-    display: block;
+.slide1, .slide2, .slide3, .slide4, .slide5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     opacity: 1;
     transform: translateX(-50%);
-    transition: left 0.3s;
+    transition: left 0.5s;
 }
 .slide1 {
-    left: 20%;
+    left: 12%;
 }
 .slide2 {
+    left: 30%;
+}
+.slide3 {
     left: 50%;
 }
-.slide3{
-    left: 80%;
+.slide4 {
+    left: 70%;
+}
+.slide5 {
+    left: 88%;
+}
+@media only screen and (max-width: 640px) {
+    .slide1, .slide5{
+        display: none;
+    }
+    .slide2{
+        left: 20%;
+    }
+    .slide4{
+        left: 80%;
+    }
 }
 .fondo-logo-slide {
     background-color: white;
-    width: 50%;
-    max-width: 300px;
-    border-bottom-right-radius: 80px;
-    padding: 15px;
+    width: 100%;
 }
-
+.img-slide {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
 .grid-proyectos {
     min-height: 100vh;
     padding: 1vw;
@@ -419,16 +447,26 @@ body {
 .estado {
     width: fit-content;
     align-self: flex-end;
-    padding: 10px 20px;
+    padding: 1vw 2vw;
+    text-align: center;
     text-transform: uppercase;
+    text-decoration: none;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    background-color: #004763;
+    color: white;
+    font-size: max(1.5vw,10px);
 }
-.entregado {
-    background-color: #17b302
-}
-.construccion {
-    background-color: #e49c00
+.slide-c1-footer {
+    width: 100%;
+    align-self: flex-end;
+    padding: 1vw 0px;
+    margin: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: max(1vw,10px);
 }
 .container-footer {
     width: 100%;
