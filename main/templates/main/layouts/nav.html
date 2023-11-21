@@ -1,106 +1,139 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSJ Grupo Inmobiliario</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'Imagenes/favicon csj.png' %}">
-    <link rel="stylesheet" href="{% static 'clases.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'Imagenes/favicon csj.png' %}"
+    />
+    <link rel="stylesheet" href="{% static 'clases.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="{% static 'script.js' %}"></script>
     <style>
-        .intro-bg{
-            background-image: url("{% static 'Imagenes/Fondo inicio1.jpeg'%}");
-            background-size: cover;
-            background-position: center 20%;
-            height: -webkit-fill-available;
-        }
-        .data-bg{
-            background-image: url("{% static 'Imagenes/Textura claro.png'%}");
-            background-size: contain;
-        }
-        .proyectos-bg{
-            background-image: url("{% static 'Imagenes/Textura oscuro.png'%}");
-            background-size: contain;
-        }
-        .nosotros-bg {
-            background-image: url("{% static 'Imagenes/dispo-MISION.jpg'%}");
-            background-size: cover;
-        }
-        .nosotros-bg2{
-            background-image: url("{% static 'Imagenes/Textura clara dividida.jpg'%}");
-            background-size: cover;
-        }
-        .nosotros-bg3{
-            background-image: url("{% static 'Imagenes/diapo-OBJ.jpg'%}");
-            background-size: cover;
-        }
+      .intro-bg {
+        background-image: url("{% static 'Imagenes/Fondo inicio1.jpeg'%}");
+        background-size: cover;
+        background-position: center 20%;
+        height: -webkit-fill-available;
+      }
+      .data-bg {
+        background-image: url("{% static 'Imagenes/Textura claro.png'%}");
+        background-size: contain;
+      }
+      .proyectos-bg {
+        background-image: url("{% static 'Imagenes/Textura oscuro.png'%}");
+        background-size: contain;
+      }
+      .nosotros-bg {
+        background-image: url("{% static 'Imagenes/dispo-MISION.jpg'%}");
+        background-size: cover;
+      }
+      .nosotros-bg2 {
+        background-image: url("{% static 'Imagenes/Textura clara dividida.jpg'%}");
+        background-size: cover;
+      }
+      .nosotros-bg3 {
+        background-image: url("{% static 'Imagenes/diapo-OBJ.jpg'%}");
+        background-size: cover;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar" id="navbar">
-        <div class="container-fluid">
-            <a href="/" class="link-logo" id="link-logo">
-                <img src="{% static 'Imagenes/Logo CSJ.jpg' %}" class="imagen-logo" id="logo">
-                <img src="{% static 'Imagenes/Logo CSJ sin slogan.jpg' %}" class="imagen-logo-pequeña hidden" id="logo-pequeño">
-            </a>
-            <div class="navbar-container">
-                <ul class="navbar-nav" id="nav-items">
-                    <li class="nav-link">
-                        <a href="/" class="nav-item">Home</a>
-                    </li>
-                    <li class="nav-link dropdown">
-                        <a href="/proyectos" class="nav-item dropbtn">Proyectos <i class="fa fa-caret-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                        </div>
-                    </li>
-                    <li class="nav-link">
-                        <a href="/nosotros" class="nav-item">Nosotros</a>
-                        </li>
-                </ul>
-                <div class="container-contact">
-                    <button class="contact" onclick="document.location='/contact'">
-                        ¡Contáctanos!
-                    </button>
-                </div>
-                <div class="navbar-toggler" onclick="toggleMenu()">
-                    <img src="{% static 'Imagenes/Menu button.jpg'%}" class="imagen-menu">
-                </div>
-            </div>
+      <div class="container-fluid">
+        <a href="/" class="link-logo" id="link-logo">
+          <img
+            src="{% static 'Imagenes/Logo CSJ.jpg' %}"
+            class="imagen-logo"
+            id="logo"
+          />
+          <img
+            src="{% static 'Imagenes/Logo CSJ sin slogan.jpg' %}"
+            class="imagen-logo-pequeña hidden"
+            id="logo-pequeño"
+          />
+        </a>
+        <div class="navbar-container">
+          <ul class="navbar-nav" id="nav-items">
+            <li class="nav-link">
+              <a href="/" class="nav-item">Home</a>
+            </li>
+            <li class="nav-link dropdown">
+              <a href="/proyectos" class="nav-item dropbtn"
+                >Proyectos <i class="fa fa-caret-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="#">VIS</a>
+                <a href="#">NO VIS</a>
+                <a href="#">COMERCIAL</a>
+                <a href="#">LUXURY HOMES</a>
+                <a href="#">VIVIENDA TURISTICA</a>
+                <a href="#">TODOS</a>
+              </div>
+            </li>
+
+            <li class="nav-link">
+              <a href="/nosotros" class="nav-item">Nosotros</a>
+            </li>
+          </ul>
+          <div class="container-contact">
+            <button class="contact" onclick="document.location='/contact'">
+              ¡Contáctanos!
+            </button>
+          </div>
+          <div class="navbar-toggler" onclick="toggleMenu()">
+            <img
+              src="{% static 'Imagenes/Menu button.jpg'%}"
+              class="imagen-menu"
+            />
+          </div>
         </div>
+      </div>
     </nav>
-    {% block content %}
-    {% endblock %}
+    {% block content %} {% endblock %}
     <div class="container-footer">
-        <img class="imagen-logo img-grande" src="{% static 'Imagenes/Logo CSJ azul.png'%}" alt="CSJ Grupo Inmobiliario">
-        <div class="footer">
-            <div class="block-footer">
-                <div class="block-footer-subt">
-                    <h3 class="footer-subt">Contacto</h3>
-                    <div class="footer-divider"></div>
-                </div>
-                <div class="block-footer-info">
-                    <p><strong>Teléfono:</strong> 301 618 3674</p>
-                    <p><strong>Correo:</strong> secretaria@csjgrupoinmobiliaria.com</p>
-                </div>
-            </div>
-            <div class="block-footer">
-                <div class="block-footer-subt">
-                    <h3 class="footer-subt">Ubicación</h3>
-                    <div class="footer-divider"></div>
-                </div>
-                <div class="block-footer-info">
-                    <p><strong>Dirección:</strong> Indiana Mall, Km 17 Via las palmas, oficina 288.</p>
-                </div>
-            </div>
-            <div class="block-footer-info">
-                Icons by <a target="_blank" href="https://icons8.com" style="color: white;">Icons8</a>
-            </div>
+      <img
+        class="imagen-logo img-grande"
+        src="{% static 'Imagenes/Logo CSJ azul.png'%}"
+        alt="CSJ Grupo Inmobiliario"
+      />
+      <div class="footer">
+        <div class="block-footer">
+          <div class="block-footer-subt">
+            <h3 class="footer-subt">Contacto</h3>
+            <div class="footer-divider"></div>
+          </div>
+          <div class="block-footer-info">
+            <p><strong>Teléfono:</strong> 301 618 3674</p>
+            <p><strong>Correo:</strong> secretaria@csjgrupoinmobiliaria.com</p>
+          </div>
         </div>
+        <div class="block-footer">
+          <div class="block-footer-subt">
+            <h3 class="footer-subt">Ubicación</h3>
+            <div class="footer-divider"></div>
+          </div>
+          <div class="block-footer-info">
+            <p>
+              <strong>Dirección:</strong> Indiana Mall, Km 17 Via las palmas,
+              oficina 288.
+            </p>
+          </div>
+        </div>
+        <div class="block-footer-info">
+          Icons by
+          <a target="_blank" href="https://icons8.com" style="color: white"
+            >Icons8</a
+          >
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
