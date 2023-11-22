@@ -5,33 +5,13 @@
     <div class="grid-proyectos">
         <div class="fila">
             {% for proyecto in proyectos %}
-            <a class="col" href="/proyecto/1" style="background-image: url('{{proyecto.imagen1.url}}');">
-                <h2 class="same-class">Etapa 1 - Villa Romera Campestre</h2>
-                <h2 class="estado">Entregado</h2>
-            </a>
+                {% if proyecto.imagen1 %}
+                <a class="col" href="/proyecto/1" style="background-image: url('{{proyecto.imagen1.url}}');">
+                    <h2 class="same-class">{{proyecto.nombre}}</h2>
+                    <h2 class="estado">{{proyecto.estado}}</h2>
+                </a>
+                {% endif %}
             {% endfor %}
-            <a class="col">
-                <h2 class="same-class">Etapa 2 - Villa Romera Campestre</h2>
-                <h2 class="estado">Entregado</h2>
-            </a>
-            <a class="col">
-                <h2 class="same-class">Etapa 3 - Villa Romera Campestre</h2>
-                <h2 class="estado">Entregado</h2>
-            </a>
-        </div>
-        <div class="fila">
-            <a class="col">
-                <h2 class="same-class">Etapa 4 - Villa Romera Campestre</h2>
-                <h2 class="estado">Entregado</h2>
-            </a>
-            <a class="col">
-                <h2 class="same-class">Torre 5 - Villa Romera Campestre</h2>
-                <h2 class="estado">En construcción</h2>
-            </a>
-            <a class="col">
-                <h2 class="same-class">Etapa 3 - Villa Romera Campestre</h2>
-                <h2 class="estado">Entregado</h2>
-            </a>
         </div>
     </div>
 </div>

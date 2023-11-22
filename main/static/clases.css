@@ -412,6 +412,8 @@ body {
   justify-content: flex-end;
   text-decoration: none;
   color: black;
+  background-size: cover;
+  background-position: center;
 }
 .same-class {
   color: yellow;
