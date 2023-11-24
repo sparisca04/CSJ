@@ -6,7 +6,7 @@
         <div class="fila">
             {% for proyecto in proyectos %}
                 {% if proyecto.imagen1 %}
-                <a class="col" href="/proyecto/1" style="background-image: url('{{proyecto.imagen1.url}}');">
+                <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
                     <h2 class="same-class">{{proyecto.nombre}}</h2>
                     <h2 class="estado">{{proyecto.estado}}</h2>
                 </a>
