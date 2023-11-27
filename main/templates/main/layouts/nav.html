@@ -32,6 +32,23 @@
         background-size: contain;
         background-repeat: no-repeat;
       }
+      .bg-sup-izq{ 
+        background-image: url("{% static 'Imagenes/Textura clara superior izquierda.jpg'%}");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .bg-inf-izq{ 
+        background-image: url("{% static 'Imagenes/Textura clara inferior izquierda.png'%}");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .bg-inf-der{ 
+        background-image: url("{% static 'Imagenes/Textura clara inferior derecha.png'%}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+      }
       .nosotros-bg {
         background-image: url("{% static 'Imagenes/dispo-MISION.jpg'%}");
         background-size: cover;
@@ -67,11 +84,16 @@
               <a href="/" class="nav-item">Home</a>
             </li>
             <li class="nav-link dropdown">
-              <a href="/proyectos" class="nav-item dropbtn"
-                >Proyectos <i class="fa fa-caret-down"></i
-              ></a>
+              <a href="/proyectos" class="nav-item dropbtn">Proyectos <i class="fa fa-caret-down"></i></a>
               <div class="dropdown-content">
-                <a href="#">VIS</a>
+                <a class="dropdown-element" href="#">VIS</a>
+                <div class="dropdown-element-content">
+                  {% for proyecto in proyectos %}
+                    {% if is_vis %}
+                      <a href="#">{{proyecto.nombre}}</a>
+                    {% endif %}
+                  {% endfor %}
+                </div>
                 <a href="#">NO VIS</a>
                 <a href="#">COMERCIAL</a>
                 <a href="#">LUXURY HOMES</a>
@@ -125,6 +147,9 @@
             <p>
               <strong>Dirección:</strong> Indiana Mall, Km 17 Via las palmas,
               oficina 288.
+            </p>
+            <p>
+              <strong>Horario:</strong> Lunes a Viernes 8:00 am - 6:00 pm.
             </p>
           </div>
         </div>

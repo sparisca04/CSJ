@@ -3,6 +3,10 @@ from django.shortcuts import render, get_object_or_404
 from .models import Proyecto, ProyectoDestacado
 
 # Create your views here.
+def nav(request):
+    proyectos = Proyecto.objects.all()
+    return render(request, "main/nav.html", {'proyectos': proyectos})
+
 def home(request):
     proyectos = ProyectoDestacado.objects.all()
     return render(request, "main/home.html", {'proyectos': proyectos})
