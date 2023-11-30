@@ -1,7 +1,22 @@
 function toggleMenu(){
-    var navLinks = document.getElementById('nav-items');
-    navLinks.classList.toggle('navbar-nav-active');
+  var navLinks = document.getElementById('nav-items');
+  navLinks.classList.toggle('navbar-nav-active');
 }
+function dropdownProyectos(elemento, tipo){
+  var dropdownContent = document.getElementById(tipo);
+  var element = document.getElementById(elemento);
+  dropdownContent.style.display = "block"
+  dropdownContent.addEventListener('mouseover', function() {
+    dropdownContent.style.display = "block"
+  });
+  element.addEventListener('mouseout', function(){
+    dropdownContent.style.display = "none"
+  });
+  dropdownContent.addEventListener('mouseout', function() {
+    dropdownContent.style.display = "none"
+  });
+}
+
 window.onscroll = function(){
   var logo = document.getElementById('logo');
   var logoSmall = document.getElementById('logo-pequeño');

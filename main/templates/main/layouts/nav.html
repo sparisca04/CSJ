@@ -85,20 +85,22 @@
             </li>
             <li class="nav-link dropdown">
               <a href="/proyectos" class="nav-item dropbtn">Proyectos <i class="fa fa-caret-down"></i></a>
-              <div class="dropdown-content">
-                <a class="dropdown-element" href="#">VIS</a>
-                <div class="dropdown-element-content">
+              <div style="display: flex; position: fixed;">
+                <div class="dropdown-content">
+                  <a class="dropdown-element" href="#" id="VIS" onmouseenter="dropdownProyectos('VIS','vis')">VIS</a>
+                  <a href="#">NO VIS</a>
+                  <a href="#">COMERCIAL</a>
+                  <a href="#">LUXURY HOMES</a>
+                  <a href="#">VIVIENDA TURISTICA</a>
+                  <a href="#">TODOS</a>
+                </div>
+                <div class="dropdown-element-content" id="vis">
+                  <a href="#">ooeoeoe</a>
                   {% for proyecto in proyectos %}
                     {% if is_vis %}
-                      <a href="#">{{proyecto.nombre}}</a>
                     {% endif %}
                   {% endfor %}
                 </div>
-                <a href="#">NO VIS</a>
-                <a href="#">COMERCIAL</a>
-                <a href="#">LUXURY HOMES</a>
-                <a href="#">VIVIENDA TURISTICA</a>
-                <a href="#">TODOS</a>
               </div>
             </li>
 
