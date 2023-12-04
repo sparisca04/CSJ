@@ -32,17 +32,17 @@
         background-size: contain;
         background-repeat: no-repeat;
       }
-      .bg-sup-izq{ 
+      .bg-sup-izq {
         background-image: url("{% static 'Imagenes/Textura clara superior izquierda.jpg'%}");
         background-size: contain;
         background-repeat: no-repeat;
       }
-      .bg-inf-izq{ 
+      .bg-inf-izq {
         background-image: url("{% static 'Imagenes/Textura clara inferior izquierda.png'%}");
         background-size: contain;
         background-repeat: no-repeat;
       }
-      .bg-inf-der{ 
+      .bg-inf-der {
         background-image: url("{% static 'Imagenes/Textura clara inferior derecha.png'%}");
         background-size: contain;
         background-repeat: no-repeat;
@@ -84,21 +84,96 @@
               <a href="/" class="nav-item">Home</a>
             </li>
             <li class="nav-link dropdown">
-              <a href="/proyectos" class="nav-item dropbtn">Proyectos <i class="fa fa-caret-down"></i></a>
-              <div style="display: flex; position: fixed;">
+              <a href="/proyectos" class="nav-item dropbtn"
+                >Proyectos <i class="fa fa-caret-down"></i
+              ></a>
+              <div style="display: flex; position: fixed">
                 <div class="dropdown-content">
-                  <a class="dropdown-element" href="#" id="VIS" onmouseenter="dropdownProyectos('VIS','vis')">VIS</a>
-                  <a href="#">NO VIS</a>
-                  <a href="#">COMERCIAL</a>
-                  <a href="#">LUXURY HOMES</a>
-                  <a href="#">VIVIENDA TURISTICA</a>
-                  <a href="#">TODOS</a>
+                  <a
+                    class="dropdown-element"
+                    href="#"
+                    id="VIS"
+                    onmouseenter="dropdownProyectos('VIS','vis')"
+                    >VIS
+                  </a>
+                  <a
+                    class="dropdown-element"
+                    href="#"
+                    id="NO VIS"
+                    onmouseenter="dropdownProyectos('NO VIS','no vis')"
+                    >NO VIS
+                  </a>
+                  <a
+                    class="dropdown-element"
+                    href="#"
+                    id="COMERCIAL"
+                    onmouseenter="dropdownProyectos('COMERCIAL','comercial')"
+                    >COMERCIAL
+                  </a>
+                  <a
+                    class="dropdown-element"
+                    href="#"
+                    id="LUXURY HOMES"
+                    onmouseenter="dropdownProyectos('LUXURY HOMES','luxury homes')"
+                    >LUXURY HOMES
+                  </a>
+                  <a
+                    class="dropdown-element"
+                    href="#"
+                    id="VIVIENDA TURISTICA"
+                    onmouseenter="dropdownProyectos('VIVIENDA TURISTICA','vivienda turistica')"
+                    >VIVIENDA TURISTICA
+                  </a>
+                  <a href="/proyectos">TODOS</a>
                 </div>
                 <div class="dropdown-element-content" id="vis">
                   <a href="#">ooeoeoe</a>
-                  {% for proyecto in proyectos %}
-                    {% if is_vis %}
-                    {% endif %}
+                  <a href="#">ooeoeoe</a>
+                  <a href="#">ooeoeoe</a>
+                  <a href="#">ooeoeoe</a>
+                  {% for proyecto in proyectos %} 
+                  {% if is_vis %}
+                  {% endif %} 
+                  {% endfor %}
+                </div>
+                <div class="dropdown-element-content" id="no vis">
+                  <a href="#">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  {% for proyecto in proyectos %} 
+                  {% if is_vis %}
+                  {% endif %} 
+                  {% endfor %}
+                </div>
+                <div class="dropdown-element-content" id="comercial">
+                  <a href="#">5</a>
+                  <a href="#">6</a>
+                  <a href="#">7</a>
+                  <a href="#">8</a>
+                  {% for proyecto in proyectos %} 
+                  {% if is_vis %}
+                  {% endif %} 
+                  {% endfor %}
+                </div>
+                <div class="dropdown-element-content" id="luxury homes">
+                  <a href="#">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">44</a>
+                  {% for proyecto in proyectos %} 
+                  {% if is_vis %}
+                  {% endif %} 
+                  {% endfor %}
+                </div>
+                <div class="dropdown-element-content" id="vivienda turistica">
+                  <a href="#">5</a>
+                  <a href="#">6</a>
+                  <a href="#">7</a>
+                  <a href="#">88</a>
+                  {% for proyecto in proyectos %} 
+                  {% if is_vis %}
+                  {% endif %} 
                   {% endfor %}
                 </div>
               </div>
@@ -150,9 +225,7 @@
               <strong>Dirección:</strong> Indiana Mall, Km 17 Via las palmas,
               oficina 288.
             </p>
-            <p>
-              <strong>Horario:</strong> Lunes a Viernes 8:00 am - 6:00 pm.
-            </p>
+            <p><strong>Horario:</strong> Lunes a Viernes 8:00 am - 6:00 pm.</p>
           </div>
         </div>
         <div class="block-footer-info">
