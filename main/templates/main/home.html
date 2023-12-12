@@ -55,9 +55,11 @@
             {% for proyecto in proyectos %}
             <a class="slide-c1 fade" href="{{ proyecto.site_url }}" target="_blank">
                 <div class="fondo-logo-slide">
-                    <img style="width: 100%;" src="{{ proyecto.logo.url }}" alt="">
+                    <img style="height: 100%;" src="{{ proyecto.logo.url }}" alt="">
                 </div>
+                {% if proyecto.imagen %}
                 <div class="img-slide" style="background-image: url('{{ proyecto.imagen.url }}');"></div>
+                {% endif %}
                 <h2 class="slide-c1-footer" style="background-color: {{ proyecto.color }};">{{ proyecto.estado }}</h2>
             </a>
             {% endfor %}
@@ -125,13 +127,24 @@
     </div>
     <div class="atributo">
         <img class="img-atributo" src="{% static 'Imagenes/Diseño.png' %}" alt="">
-        Diseño</div>
+        Diseño
+    </div>
     <div class="atributo">
         <img class="img-atributo" src="{% static 'Imagenes/Innovacion.png' %}" alt="">
-        Innovación</div>
-    <div class="atributo">Consultoría</div>
-    <div class="atributo">Construcción</div>
-    <div class="atributo">Promoción</div>
+        Innovación
+    </div>
+    <div class="atributo">
+        <img class="img-atributo" src="{% static 'Imagenes/Consultoria.png' %}" alt="">
+        Consultoría
+    </div>
+    <div class="atributo">
+        <img class="img-atributo" src="{% static 'Imagenes/Construccion.png' %}" alt="">
+        Construcción
+    </div>
+    <div class="atributo">
+        <img class="img-atributo" src="{% static 'Imagenes/Promocion.png' %}" alt="">
+        Promoción
+    </div>
     <div class="atributo">Gerencia</div>
     <div class="atributo">Experiencias</div>
 </div>

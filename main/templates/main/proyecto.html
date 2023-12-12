@@ -48,7 +48,7 @@
         <a class="ir-sitio-web"  href="{{ proyecto.site_url }}" target="_blank">Ir al sitio web</a>
         <div style="width: 100%; height: 100%;"> 
             <div style="padding: 0px 30px; color: #004763; text-align: center;">
-                <h2>{{proyecto.nombre}}</h2>
+                <h1>{{proyecto.nombre}}</h1>
                 <div style="display: flex; column-gap: 10px; justify-content: center;">
                     {% if proyecto.ig_url %}
                     <a href="{{ proyecto.ig_url }}" target="_blank">
@@ -98,6 +98,10 @@
                         </svg>
                     </a>
                     {% endif %}
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <img style="width: 30px; height: auto; padding: 10px;" src="{% static 'Imagenes/urbanismo.png' %}" alt="">
+                    <h2>{{proyecto.ubicacion}}</h2>
                 </div>
                 <div style="display: flex; column-gap: 20px;">
                     <div style="width: 50%;">

@@ -178,6 +178,9 @@ body {
 }
 .dropdown-element-content a {
   display: block;
+  text-decoration: none;
+  color: black;
+  padding: 7px 0px;
 }
 form {
   max-width: 600px;
@@ -430,6 +433,7 @@ input[type="submit"]:hover {
 .fondo-logo-slide {
   background-color: white;
   width: 100%;
+  max-height: 30%;
 }
 .img-slide {
   background-size: cover;
