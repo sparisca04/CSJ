@@ -20,16 +20,27 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  background-color: #f2f2f2;
-  height: 70vh;
+  height: 100vh;
+}
+.container-nuestras-marcas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  height: auto;
+}
+.logo{
+  width: 25%;
+  height: fit-content;
 }
 .container-separador {
   height: 30vh;
   background-color: #004763;
 }
 .container-nosotros img {
-  max-width: 50%;
-  object-fit: cover;
+  width: 100%;
+  object-fit: contain;
   height: 100%;
 }
 .container-nosotros .text {
