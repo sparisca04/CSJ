@@ -6,7 +6,8 @@ class Proyecto(models.Model):
     ESTADOS = (
         ("Entregado", "Entregado"),
         ("En construcción", "En construcción"),
-        ("Lanzamiento", "Lanzamiento")
+        ("Lanzamiento", "Lanzamiento"),
+        ("En ventas", "En ventas")
     )
 
     imagen1 = models.ImageField(null=True, blank=True, upload_to='Proyectos')

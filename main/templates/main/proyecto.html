@@ -45,7 +45,9 @@
         <div class="vis">VIS</div>
         {% endif %}
         <a class="link-logo-proyecto" href="{{ proyecto.site_url }}" target="_blank"><img class="logo-proyecto" src="{{ proyecto.logo.url }}" alt=""></a>
+        {% if proyecto.site_url %}
         <a class="ir-sitio-web"  href="{{ proyecto.site_url }}" target="_blank">Ir al sitio web</a>
+        {% endif %}
         <div style="width: 100%; height: 100%;"> 
             <div style="padding: 0px 30px; color: #004763; text-align: center;">
                 <h1>{{proyecto.nombre}}</h1>
@@ -102,16 +104,6 @@
                 <div style="display: flex; justify-content: center; align-items: center;">
                     <img style="width: 30px; height: auto; padding: 10px;" src="{% static 'Imagenes/urbanismo.png' %}" alt="">
                     <h2>{{proyecto.ubicacion}}</h2>
-                </div>
-                <div style="display: flex; column-gap: 20px;">
-                    <div style="width: 50%;">
-                        <p><strong>Área construida:</strong></p>
-                        <p class="texto-proyecto">{{proyecto.areaConstruida|linebreaksbr}}</p>
-                    </div>
-                    <div style="width: 50%;">
-                        <p><strong>Urbanismo:</strong></p>
-                        <p class="texto-proyecto">{{proyecto.areaConstruidaUrbanismo|linebreaksbr}}</p>
-                    </div>
                 </div>
             </div>
         </div>

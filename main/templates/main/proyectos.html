@@ -6,13 +6,51 @@
     <div class="grid-proyectos">
         <div class="fila">
             {% for proyecto in proyectos %}
-                {% if proyecto.imagen1 %}
-                <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
-                    <div class="col-container">
-                        <h2 class="same-class">{{proyecto.nombre}}</h2>
-                        <h2 class="estado">{{proyecto.estado}}</h2>
-                    </div>
-                </a>
+                {% if proyecto.estado == "En ventas" %}
+                    {% if proyecto.imagen1 %}
+                    <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
+                        <div class="col-container">
+                            <h2 class="same-class">{{proyecto.nombre}}</h2>
+                            <h2 class="estado">{{proyecto.estado}}</h2>
+                        </div>
+                    </a>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% for proyecto in proyectos %}
+                {% if proyecto.estado == "Entregado" %}
+                    {% if proyecto.imagen1 %}
+                    <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
+                        <div class="col-container">
+                            <h2 class="same-class">{{proyecto.nombre}}</h2>
+                            <h2 class="estado">{{proyecto.estado}}</h2>
+                        </div>
+                    </a>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% for proyecto in proyectos %}
+                {% if proyecto.estado == "Lanzamiento" %}
+                    {% if proyecto.imagen1 %}
+                    <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
+                        <div class="col-container">
+                            <h2 class="same-class">{{proyecto.nombre}}</h2>
+                            <h2 class="estado">{{proyecto.estado}}</h2>
+                        </div>
+                    </a>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% for proyecto in proyectos %}
+                {% if proyecto.estado == "En construcción" %}
+                    {% if proyecto.imagen1 %}
+                    <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
+                        <div class="col-container">
+                            <h2 class="same-class">{{proyecto.nombre}}</h2>
+                            <h2 class="estado">{{proyecto.estado}}</h2>
+                        </div>
+                    </a>
+                    {% endif %}
                 {% endif %}
             {% endfor %}
         </div>
