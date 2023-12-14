@@ -10,6 +10,9 @@
                     {% if proyecto.imagen1 %}
                     <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
                         <div class="col-container">
+                            {% if proyecto.logo %}
+                            <img src="{{proyecto.logo.url}}" alt="Logo" class="logo-proyectos">
+                            {% endif %}
                             <h2 class="same-class">{{proyecto.nombre}}</h2>
                             <h2 class="estado">{{proyecto.estado}}</h2>
                         </div>
@@ -22,6 +25,9 @@
                     {% if proyecto.imagen1 %}
                     <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
                         <div class="col-container">
+                            {% if proyecto.logo %}
+                            <img src="{{proyecto.logo.url}}" alt="Logo" class="logo-proyectos">
+                            {% endif %}
                             <h2 class="same-class">{{proyecto.nombre}}</h2>
                             <h2 class="estado">{{proyecto.estado}}</h2>
                         </div>
@@ -34,6 +40,9 @@
                     {% if proyecto.imagen1 %}
                     <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
                         <div class="col-container">
+                            {% if proyecto.logo %}
+                            <img src="{{proyecto.logo.url}}" alt="Logo" class="logo-proyectos">
+                            {% endif %}
                             <h2 class="same-class">{{proyecto.nombre}}</h2>
                             <h2 class="estado">{{proyecto.estado}}</h2>
                         </div>
@@ -46,6 +55,9 @@
                     {% if proyecto.imagen1 %}
                     <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
                         <div class="col-container">
+                            {% if proyecto.logo %}
+                            <img src="{{proyecto.logo.url}}" alt="Logo" class="logo-proyectos">
+                            {% endif %}
                             <h2 class="same-class">{{proyecto.nombre}}</h2>
                             <h2 class="estado">{{proyecto.estado}}</h2>
                         </div>
