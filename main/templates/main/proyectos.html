@@ -1,6 +1,9 @@
 {% extends 'main/layouts/nav.html' %}
 
 {% block content %}
+<head>
+    <title>Proyectos | CSJ Grupo Inmobiliaria</title>
+</head>
 <div class="proyectos-bg" style="padding: 50px;padding-top: max(5vw,100px)">
     <h1 class="intro-title" style="color: #096B8C; text-shadow: 2px 2px 3px #0000005e;">proyectos</h1>
     <div class="grid-proyectos">
@@ -13,7 +16,6 @@
                             {% if proyecto.logo %}
                             <img src="{{proyecto.logo.url}}" alt="Logo" class="logo-proyectos">
                             {% endif %}
-                            <h2 class="same-class">{{proyecto.nombre}}</h2>
                             <h2 class="estado">{{proyecto.estado}}</h2>
                         </div>
                     </a>
@@ -28,7 +30,6 @@
                             {% if proyecto.logo %}
                             <img src="{{proyecto.logo.url}}" alt="Logo" class="logo-proyectos">
                             {% endif %}
-                            <h2 class="same-class">{{proyecto.nombre}}</h2>
                             <h2 class="estado">{{proyecto.estado}}</h2>
                         </div>
                     </a>
@@ -43,7 +44,6 @@
                             {% if proyecto.logo %}
                             <img src="{{proyecto.logo.url}}" alt="Logo" class="logo-proyectos">
                             {% endif %}
-                            <h2 class="same-class">{{proyecto.nombre}}</h2>
                             <h2 class="estado">{{proyecto.estado}}</h2>
                         </div>
                     </a>
@@ -58,7 +58,6 @@
                             {% if proyecto.logo %}
                             <img src="{{proyecto.logo.url}}" alt="Logo" class="logo-proyectos">
                             {% endif %}
-                            <h2 class="same-class">{{proyecto.nombre}}</h2>
                             <h2 class="estado">{{proyecto.estado}}</h2>
                         </div>
                     </a>

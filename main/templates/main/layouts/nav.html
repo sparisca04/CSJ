@@ -4,7 +4,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSJ Grupo Inmobiliario</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -85,10 +84,8 @@
               <a href="/" class="nav-item">Home</a>
             </li>
             <li class="nav-link dropdown">
-              <a href="/proyectos" class="nav-item dropbtn"
-                >Proyectos <i class="fa fa-caret-down"></i
-              ></a>
-              <div style="display: flex; position: fixed">
+              <a href="/proyectos" class="nav-item dropbtn">Proyectos <i class="fa fa-caret-down"></i></a>
+              <div style="display: flex; position: fixed; z-index: 1;">
                 <div class="dropdown-content">
                   <a
                     class="dropdown-element"
@@ -167,10 +164,14 @@
                 </div>
               </div>
             </li>
-
             <li class="nav-link">
               <a href="/nosotros" class="nav-item">Nosotros</a>
             </li>
+            <div class="container-contact-dropdown">
+              <button class="contact" onclick="document.location='/contact'">
+                ¡Contáctanos!
+              </button>
+            </div>
           </ul>
           <div class="container-contact">
             <button class="contact" onclick="document.location='/contact'">

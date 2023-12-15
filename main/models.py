@@ -15,7 +15,7 @@ class Proyecto(models.Model):
     imagen3 = models.ImageField(null=True, blank=True, upload_to='Proyectos')
     logo = models.ImageField(null=True, blank=True, upload_to='Proyectos')
     nombre = models.TextField(max_length=50)
-    is_vis = models.BooleanField(default=False)
+    vis = models.BooleanField(default=False)
     piscina = models.BooleanField(default=False)
     gimnasio = models.BooleanField(default=False)
     salon_social = models.BooleanField(default=False)

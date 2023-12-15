@@ -2,7 +2,9 @@
 
 {% load static %}
 {% block content %}
-
+<head>
+    <title>{{proyecto.nombre}} | CSJ Grupo Inmobiliaria</title>
+</head>
 <div class="container-proyecto">
     <div class="slider2">
         <div class="carrusel-proyectos">
@@ -41,16 +43,16 @@
         </script>
     </div>
     <div class="info-proyecto">
-        {% if proyecto.is_vis %}
+        {% if proyecto.vis %}
         <div class="vis">VIS</div>
         {% endif %}
         <a class="link-logo-proyecto" href="{{ proyecto.site_url }}" target="_blank"><img class="logo-proyecto" src="{{ proyecto.logo.url }}" alt=""></a>
-        {% if proyecto.site_url %}
-        <a class="ir-sitio-web"  href="{{ proyecto.site_url }}" target="_blank">Ir al sitio web</a>
-        {% endif %}
+        <h1>{{proyecto.nombre}}</h1>
         <div style="width: 100%; height: 100%;"> 
-            <div style="padding: 0px 30px; color: #004763; text-align: center;">
-                <h1>{{proyecto.nombre}}</h1>
+            <div class="info-proyecto-block">
+                {% if proyecto.site_url %}
+                <a class="ir-sitio-web"  href="{{ proyecto.site_url }}" target="_blank">Mayores informes</a>
+                {% endif %}
                 <div style="display: flex; column-gap: 10px; justify-content: center;">
                     {% if proyecto.ig_url %}
                     <a href="{{ proyecto.ig_url }}" target="_blank">

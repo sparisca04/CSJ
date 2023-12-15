@@ -19,7 +19,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   height: 100vh;
 }
 .container-nuestras-marcas{
@@ -27,7 +26,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   height: auto;
 }
 .logo{
@@ -145,6 +143,7 @@ body {
   margin: 20px;
   display: inline-block;
   position: relative;
+  text-align: center;
 }
 .dropdown {
   float: left;
@@ -164,7 +163,7 @@ body {
   float: none;
   color: white;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.2px;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -215,7 +214,8 @@ input[type="text"],
 input[type="email"],
 textarea {
   display: block;
-  width: 100%;
+  width: -webkit-fill-available;
+  resize: vertical;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -287,6 +287,12 @@ input[type="submit"]:hover {
   align-content: center;
   flex-wrap: wrap;
 }
+.container-contact-dropdown {
+  display: none;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
 .contact {
   background-color: #096b8c;
   border: none;
@@ -339,7 +345,7 @@ input[type="submit"]:hover {
   position: absolute;
   width: auto;
   font-weight: bold;
-  font-size: 4vw;
+  font-size: max(4vw, 30px);
   border-radius: 3px;
   user-select: none;
   -webkit-user-select: none;
@@ -387,7 +393,7 @@ input[type="submit"]:hover {
   justify-content: center;
   padding: 10px;
   height: 35vw;
-  min-height: 220px;
+  min-height: 275px;
 }
 .carrusel-proyectos {
   display: flex;
@@ -397,20 +403,16 @@ input[type="submit"]:hover {
 .slide-c1 {
   position: absolute;
   height: 30vw;
-  min-height: 220px;
+  min-height: 275px;
   width: 15%;
-  min-width: 100px;
+  min-width: 140px;
   display: none;
   text-decoration: none;
   opacity: 0;
   background-position: center;
   background-size: cover;
 }
-.slide1,
-.slide2,
-.slide3,
-.slide4,
-.slide5 {
+.slide1, .slide2, .slide3, .slide4, .slide5 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -433,7 +435,7 @@ input[type="submit"]:hover {
 .slide5 {
   left: 88%;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 800px) {
   .slide1,
   .slide5 {
     display: none;
@@ -595,7 +597,6 @@ input[type="submit"]:hover {
   flex-direction: column;
   justify-content: flex-end;
   width: 70%;
-  height: calc(100vh - max(5vw, 60px));
   background-size: cover;
   background-position: center;
 }
@@ -609,6 +610,7 @@ input[type="submit"]:hover {
   display: flex;
   padding-top: max(5vw, 60px);
   height: calc(100vh - max(5vw, 60px));
+  min-height: 600px;
 }
 .link-logo-proyecto {
   padding: 10px;
@@ -621,14 +623,24 @@ input[type="submit"]:hover {
   background-color: #004763;
   color: white;
   padding: 10px;
+  margin: 20px;
   border-radius: 10px;
   text-decoration: none;
+  display: block;
+  width: fit-content;
 }
 .info-proyecto {
   display: flex;
   flex-direction: column;
   width: 30%;
   height: 100%;
+  align-items: center;
+}
+.info-proyecto-block {
+  padding: 0px 30px;
+  color: #004763;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .texto-proyecto {
@@ -802,6 +814,7 @@ input[type="submit"]:hover {
   }
   .nav-item {
     font-size: 20px;
+    padding: 0px;
   }
   .container-data {
     flex-direction: column;
@@ -819,11 +832,20 @@ input[type="submit"]:hover {
   .container-contact {
     display: none;
   }
+  .container-contact-dropdown {
+    display: flex;
+  }
   .navbar-container {
     justify-content: flex-end;
   }
   .navbar-toggler {
     margin-right: 10vw;
+  }
+  .slide2, .slide4 {
+    display: none;
+  }
+  .slide3 {
+    left: 50%;
   }
 }
 @media only screen and (max-width: 650px) {
