@@ -55,15 +55,15 @@
     </div>
     <div class="slider1">
         <div class="carrusel-proyectos">
-            {% for proyecto in proyectos %}
-            <a class="slide-c1 fade" href="{{ proyecto.site_url }}" target="_blank">
+            {% for proyectoDestacado in proyectosDestacados %}
+            <a class="slide-c1 fade" href="{{ proyectoDestacado.site_url }}" target="_blank">
                 <div class="fondo-logo-slide">
-                    <img style="height: 100%;" src="{{ proyecto.logo.url }}" alt="">
+                    <img style="height: 100%;" src="{{ proyectoDestacado.logo.url }}" alt="">
                 </div>
-                {% if proyecto.imagen %}
-                <div class="img-slide" style="background-image: url('{{ proyecto.imagen.url }}');"></div>
+                {% if proyectoDestacado.imagen %}
+                <div class="img-slide" style="background-image: url('{{ proyectoDestacado.imagen.url }}');"></div>
                 {% endif %}
-                <h2 class="slide-c1-footer" style="background-color: {{ proyecto.color }};">{{ proyecto.estado }}</h2>
+                <h2 class="slide-c1-footer" style="background-color: {{ proyectoDestacado.color }};">{{ proyectoDestacado.estado }}</h2>
             </a>
             {% endfor %}
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

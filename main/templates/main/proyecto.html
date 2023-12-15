@@ -47,8 +47,11 @@
         <div class="vis">VIS</div>
         {% endif %}
         <a class="link-logo-proyecto" href="{{ proyecto.site_url }}" target="_blank"><img class="logo-proyecto" src="{{ proyecto.logo.url }}" alt=""></a>
-        <h1>{{proyecto.nombre}}</h1>
-        <div style="width: 100%; height: 100%;"> 
+        <div>
+            <h1 style="color: #096b8c; margin-bottom: 0px;">{{proyecto.nombre}}</h1>
+            <div class="divider"></div>
+        </div>
+        <div style="width: 100%;"> 
             <div class="info-proyecto-block">
                 {% if proyecto.site_url %}
                 <a class="ir-sitio-web"  href="{{ proyecto.site_url }}" target="_blank">Mayores informes</a>

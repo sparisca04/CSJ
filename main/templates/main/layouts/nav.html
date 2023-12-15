@@ -87,49 +87,30 @@
               <a href="/proyectos" class="nav-item dropbtn">Proyectos <i class="fa fa-caret-down"></i></a>
               <div style="display: flex; position: fixed; z-index: 1;">
                 <div class="dropdown-content">
-                  <a
-                    class="dropdown-element"
-                    id="VIS"
-                    onmouseenter="dropdownProyectos('VIS','vis')"
-                    >VIS
+                  <a class="dropdown-element" id="VIS" onmouseenter="dropdownProyectos('VIS','vis')">
+                    VIS
                   </a>
-                  <a
-                    class="dropdown-element"
-                    id="NO VIS"
-                    onmouseenter="dropdownProyectos('NO VIS','no vis')"
-                    >NO VIS
+                  <a class="dropdown-element" id="NO VIS" onmouseenter="dropdownProyectos('NO VIS','no vis')">
+                    NO VIS
                   </a>
-                  <a
-                    class="dropdown-element"
-                    id="COMERCIAL"
-                    onmouseenter="dropdownProyectos('COMERCIAL','comercial')"
-                    >COMERCIAL
+                  <a class="dropdown-element" id="COMERCIAL" onmouseenter="dropdownProyectos('COMERCIAL','comercial')">
+                    COMERCIAL
                   </a>
-                  <a
-                    class="dropdown-element"
-                    id="LUXURY HOMES"
-                    onmouseenter="dropdownProyectos('LUXURY HOMES','luxury homes')"
-                    >LUXURY HOMES
+                  <a class="dropdown-element" id="LUXURY HOMES" onmouseenter="dropdownProyectos('LUXURY HOMES','luxury homes')">
+                    LUXURY HOMES
                   </a>
-                  <a
-                    class="dropdown-element"
-                    id="VIVIENDA TURISTICA"
-                    onmouseenter="dropdownProyectos('VIVIENDA TURISTICA','vivienda turistica')"
-                    >VIVIENDA TURISTICA
+                  <a class="dropdown-element" id="VIVIENDA TURISTICA" onmouseenter="dropdownProyectos('VIVIENDA TURISTICA','vivienda turistica')">
+                    VIVIENDA TURISTICA
                   </a>
                   <a href="/proyectos">TODOS</a>
                 </div>
                 <div class="dropdown-element-content" id="vis">
-                  <a href="#">VILLA ROMERA CAMPESTRE ETAPA 1</a>
-                  <a href="#">VILLA ROMERA CAMPESTRE ETAPA 2</a>
-                  <a href="#">VILLA ROMERA CAMPESTRE ETAPA 3</a>
-                  <a href="#">VILLA ROMERA Torre 10</a>
-                  <a href="#">VILLA ROMERA Torre 11</a>
-                  <a href="#">VILLA ROMERA Torre 12</a>
-                  <a href="#">VILLA ROMERA Torre 13</a>
-                  {% for proyecto in proyectos %} 
-                  {% if is_vis %}
-                  {% endif %} 
+                  {% for proyectoNav in proyectos %} 
+                    {% if proyectoNav.vis %}
+                      {% if proyectoNav.imagen1 %}
+                        <a href="/proyecto/{{proyectoNav.id}}">{{proyectoNav.nombre}}</a>
+                      {% endif %}
+                    {% endif %} 
                   {% endfor %}
                 </div>
                 <div class="dropdown-element-content" id="no vis">

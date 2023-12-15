@@ -154,7 +154,7 @@ body {
 }
 .dropdown-content {
   display: none;
-  background-color: #4db0cb;
+  background-color: #096b8c;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 3;
@@ -162,7 +162,6 @@ body {
 .dropdown-content a {
   float: none;
   color: white;
-  font-weight: 600;
   letter-spacing: 0.2px;
   padding: 12px 16px;
   text-decoration: none;
@@ -170,19 +169,17 @@ body {
   text-align: left;
 }
 .dropdown-content a:hover {
-  background-color: rgba(69, 155, 179, 0.658);
+  background-color: #4db0cb;
 }
 .dropdown:hover .dropdown-content {
   display: block;
 }
 .dropdown-element-content {
   display: none;
-  background-color: #4db0cb;
+  background-color: #096b8c;
   box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   float: none;
-  color: black;
-  padding: 12px 16px;
   text-decoration: none;
   text-align: left;
   font-size: 16px;
@@ -191,10 +188,12 @@ body {
 .dropdown-element-content a {
   display: block;
   text-decoration: none;
-  font-weight: 600;
   color: white;
   letter-spacing: 1px;
-  padding: 7px 0px;
+  padding: 12px 16px;
+}
+.dropdown-element-content a:hover {
+  background-color: #4db0cb;
 }
 form {
   max-width: 600px;
