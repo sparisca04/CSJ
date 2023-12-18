@@ -61,6 +61,12 @@
         background-color: white;
         background-repeat: no-repeat;
       }
+      .email-bg {
+        background-image: url("{% static 'Imagenes/WhatsApp Image 2023-10-24 at 10.40.35 AM.jpeg'%}");
+        background-size: cover;
+        background-position: center 20%;
+        height: -webkit-fill-available;
+      }
     </style>
   </head>
   <body>
@@ -90,9 +96,6 @@
                   <a class="dropdown-element" id="VIS" onmouseenter="dropdownProyectos('VIS','vis')">
                     VIS
                   </a>
-                  <a class="dropdown-element" id="NO VIS" onmouseenter="dropdownProyectos('NO VIS','no vis')">
-                    NO VIS
-                  </a>
                   <a class="dropdown-element" id="COMERCIAL" onmouseenter="dropdownProyectos('COMERCIAL','comercial')">
                     COMERCIAL
                   </a>
@@ -113,15 +116,9 @@
                     {% endif %} 
                   {% endfor %}
                 </div>
-                <div class="dropdown-element-content" id="no vis">
+                <div class="dropdown-element-content" id="comercial">
                   <a href="#">Terrazo</a>
                   <a href="#">Torre 14</a>
-                  {% for proyecto in proyectos %} 
-                  {% if is_vis %}
-                  {% endif %} 
-                  {% endfor %}
-                </div>
-                <div class="dropdown-element-content" id="comercial">
                   <a href="#">Mall Comercial Villa Romera Campestre</a>
                   {% for proyecto in proyectos %} 
                   {% if is_vis %}
