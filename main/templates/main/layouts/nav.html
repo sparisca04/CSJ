@@ -117,7 +117,6 @@
                   {% endfor %}
                 </div>
                 <div class="dropdown-element-content" id="comercial">
-                
                   {% for proyectoNav in proyectos %} 
                     {% if proyectoNav.comercial %}
                       {% if proyectoNav.imagen1 %}
@@ -126,18 +125,18 @@
                     {% endif %} 
                   {% endfor %}
                 </div>
-                <div class="dropdown-element-content" id="luxuryHomes">
+                <div class="dropdown-element-content" id="luxury homes">
                   {% for proyectoNav in proyectos %} 
-                    {% if proyectoNav.luxuryHomes %}
+                    {% if proyectoNav.luxury_home %}
                       {% if proyectoNav.imagen1 %}
                         <a href="/proyecto/{{proyectoNav.id}}">{{proyectoNav.nombre}}</a>
                       {% endif %}
                     {% endif %} 
                   {% endfor %}
                 </div>
-                <div class="dropdown-element-content" id="viviendaTuristica">
+                <div class="dropdown-element-content" id="vivienda turistica">
                   {% for proyectoNav in proyectos %} 
-                    {% if proyectoNav.viviendaTuristica %}
+                    {% if proyectoNav.vivienda_turistica %}
                       {% if proyectoNav.imagen1 %}
                         <a href="/proyecto/{{proyectoNav.id}}">{{proyectoNav.nombre}}</a>
                       {% endif %}

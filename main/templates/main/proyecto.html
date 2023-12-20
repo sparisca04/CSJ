@@ -55,7 +55,11 @@
         {% if proyecto.viviendaTuristica %}
         <div class="viviendaTuristica">viviendaTuristica</div>
         {% endif %}
-        <a class="link-logo-proyecto" href="{{ proyecto.site_url }}" target="_blank"><img class="logo-proyecto" src="{{ proyecto.logo.url }}" alt=""></a>
+        {% if proyecto.site_url %}
+        <a class="link-logo-proyecto" href="{{ proyecto.site_url }}"><img class="logo-proyecto" src="{{ proyecto.logo.url }}" alt=""></a>
+        {% else %}
+        <a class="link-logo-proyecto" href="/" target="_blank"><img class="logo-proyecto" src="{{ proyecto.logo.url }}" alt=""></a>
+        {% endif %}
         <div>
             <h1 style="color: #096b8c; margin-bottom: 0px;">{{proyecto.nombre}}</h1>
             <div class="divider"></div>
