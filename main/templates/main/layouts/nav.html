@@ -117,27 +117,31 @@
                   {% endfor %}
                 </div>
                 <div class="dropdown-element-content" id="comercial">
-                  <a href="#">Terrazo</a>
-                  <a href="#">Torre 14</a>
-                  <a href="#">Mall Comercial Villa Romera Campestre</a>
-                  {% for proyecto in proyectos %} 
-                  {% if is_vis %}
-                  {% endif %} 
+                
+                  {% for proyectoNav in proyectos %} 
+                    {% if proyectoNav.comercial %}
+                      {% if proyectoNav.imagen1 %}
+                        <a href="/proyecto/{{proyectoNav.id}}">{{proyectoNav.nombre}}</a>
+                      {% endif %}
+                    {% endif %} 
                   {% endfor %}
                 </div>
                 <div class="dropdown-element-content" id="luxury homes">
-                  <a href="#">Casa Fizebad</a>
-                  {% for proyecto in proyectos %} 
-                  {% if is_vis %}
-                  {% endif %} 
+                  {% for proyectoNav in proyectos %} 
+                    {% if proyectoNav.luxuryHomes %}
+                      {% if proyectoNav.imagen1 %}
+                        <a href="/proyecto/{{proyectoNav.id}}">{{proyectoNav.nombre}}</a>
+                      {% endif %}
+                    {% endif %} 
                   {% endfor %}
                 </div>
                 <div class="dropdown-element-content" id="vivienda turistica">
-                  <a href="#">Mykonos apartahotel</a>
-                  <a href="#">Casuju</a>
-                  {% for proyecto in proyectos %} 
-                  {% if is_vis %}
-                  {% endif %} 
+                  {% for proyectoNav in proyectos %} 
+                    {% if proyectoNav.viviendaTuristica %}
+                      {% if proyectoNav.imagen1 %}
+                        <a href="/proyecto/{{proyectoNav.id}}">{{proyectoNav.nombre}}</a>
+                      {% endif %}
+                    {% endif %} 
                   {% endfor %}
                 </div>
               </div>
