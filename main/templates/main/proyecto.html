@@ -46,6 +46,15 @@
         {% if proyecto.vis %}
         <div class="vis">VIS</div>
         {% endif %}
+        {% if proyecto.comercial %}
+        <div class="comercial">comercial</div>
+        {% endif %}
+        {% if proyecto.luxuryHomes %}
+        <div class="luxuryHomes">luxury Homes</div>
+        {% endif %}
+        {% if proyecto.viviendaTuristica %}
+        <div class="viviendaTuristica">viviendaTuristica</div>
+        {% endif %}
         <a class="link-logo-proyecto" href="{{ proyecto.site_url }}" target="_blank"><img class="logo-proyecto" src="{{ proyecto.logo.url }}" alt=""></a>
         <div>
             <h1 style="color: #096b8c; margin-bottom: 0px;">{{proyecto.nombre}}</h1>
