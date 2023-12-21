@@ -49,11 +49,10 @@
         background-position-y: bottom;
       }
       .nosotros-bg2 {
-        background-image: url();
-        background-color: white;
+        background-image: url("{% static 'Imagenes/Textura clara superior izquierda.jpg'%}");
         background-size: contain;
         background-repeat: no-repeat;
-        background-position-x: right;
+        background-position-x: left;
       }
       .nosotros-bg3 {
         background-image: url("");
@@ -182,9 +181,11 @@
             <div class="footer-divider"></div>
           </div>
           <div class="block-footer-info">
-            <p><strong>Cel:</strong> 301 618 3674</p>
-            <p><strong>Tel:</strong> 301 618 3674</p>
-            <p><strong>Correo:</strong> secretaria@csjgrupoinmobiliaria.com</p>
+          {% for info in infoContacto %}
+            {% if info.seccion == 'Contacto' %}
+              <p><strong>{{info.nombre}}:</strong> {{info.contenido}}</p>
+            {% endif %}
+          {% endfor %}
           </div>
         </div>
         <div class="block-footer">
@@ -193,11 +194,11 @@
             <div class="footer-divider"></div>
           </div>
           <div class="block-footer-info">
-            <p>
-              <strong>Dirección:</strong> Indiana Mall, Km 17 Via las palmas,
-              oficina 288.
-            </p>
-            <p><strong>Horario:</strong> Lunes a Viernes 7:00 am - 5:00 pm.</p>
+          {% for info in infoContacto %}
+            {% if info.seccion == 'Ubicación' %}
+              <p><strong>{{info.nombre}}:</strong> {{info.contenido}}</p>
+            {% endif %}
+          {% endfor %}
           </div>
         </div>
       </div>

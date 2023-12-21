@@ -9,6 +9,11 @@ class Proyecto(models.Model):
         ("Lanzamiento", "Lanzamiento"),
         ("En ventas", "En ventas")
     )
+    PRIORIDADES = (
+        ("Alta", "Alta"),
+        ("Media", "Media"),
+        ("Baja", "Baja")
+    )
 
     imagen1 = models.ImageField(null=True, blank=True, upload_to='Proyectos')
     imagen2 = models.ImageField(null=True, blank=True, upload_to='Proyectos')
@@ -19,6 +24,7 @@ class Proyecto(models.Model):
     comercial = models.BooleanField(default=False)
     luxury_home = models.BooleanField(default=False)
     vivienda_turistica = models.BooleanField(default=False)
+    prioridad = models.CharField(max_length=50, choices=PRIORIDADES, default='Baja')
     estado = models.CharField(max_length=50, choices=ESTADOS)
     ubicacion = models.TextField(max_length=50)
     site_url = models.CharField(max_length=200, null=True, blank=True)
@@ -36,6 +42,29 @@ class ProyectoDestacado(models.Model):
     estado = models.CharField(max_length=50, default='¡Últimas unidades!')
     color = models.CharField(max_length=50, default='#004763')
     nombre = models.TextField(max_length=50)
+
+    def __str__(self):
+        return self.nombre
+
+class Nosotros(models.Model):
+    SECCIONES = (
+        ("Misión", "Misión"),
+        ("Visión", "Visión")
+    )
+    seccion = models.CharField(max_length=50, choices=SECCIONES)
+    descripcion = models.TextField(max_length=None)
+
+    def __str__(self):
+        return self.seccion
+
+class Contacto(models.Model):
+    SECCIONES = (
+        ("Contacto", "Contacto"),
+        ("Ubicación", "Ubicación")
+    )
+    seccion =  models.CharField(max_length=50, choices=SECCIONES)
+    nombre = models.CharField(max_length=20, null=True, blank=True)
+    contenido = models.CharField(max_length=50, null=True, blank=True)
 
     def __str__(self):
         return self.nombre

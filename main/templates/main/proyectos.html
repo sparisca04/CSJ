@@ -9,7 +9,7 @@
     <div class="grid-proyectos">
         <div class="fila">
             {% for proyecto in proyectos %}
-                {% if proyecto.estado == "En ventas" %}
+                {% if proyecto.prioridad == "Alta" %}
                     {% if proyecto.imagen1 %}
                     <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
                         <div class="col-container">
@@ -23,7 +23,7 @@
                 {% endif %}
             {% endfor %}
             {% for proyecto in proyectos %}
-                {% if proyecto.estado == "Entregado" %}
+                {% if proyecto.prioridad == "Media" %}
                     {% if proyecto.imagen1 %}
                     <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
                         <div class="col-container">
@@ -37,21 +37,7 @@
                 {% endif %}
             {% endfor %}
             {% for proyecto in proyectos %}
-                {% if proyecto.estado == "Lanzamiento" %}
-                    {% if proyecto.imagen1 %}
-                    <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
-                        <div class="col-container">
-                            {% if proyecto.logo %}
-                            <img src="{{proyecto.logo.url}}" alt="Logo" class="logo-proyectos">
-                            {% endif %}
-                            <h2 class="estado">{{proyecto.estado}}</h2>
-                        </div>
-                    </a>
-                    {% endif %}
-                {% endif %}
-            {% endfor %}
-            {% for proyecto in proyectos %}
-                {% if proyecto.estado == "En construcción" %}
+                {% if proyecto.prioridad == "Baja" %}
                     {% if proyecto.imagen1 %}
                     <a class="col" href="/proyecto/{{proyecto.id}}" style="background-image: url('{{proyecto.imagen1.url}}');">
                         <div class="col-container">

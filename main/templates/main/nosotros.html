@@ -6,17 +6,23 @@
 </head>
 <body>
 	<div class="container-nosotros nosotros-bg2">
-		<img src="{% static 'Imagenes/Mision.jpeg'%}" alt="">
+		<img src="{% static 'Imagenes/Mision.png'%}" alt="">
+		<div class="text">
+			{{mision.descripcion}}
+		</div>
 	</div>
 	<div class="container-nosotros nosotros-bg3">
-		<img src="{% static 'Imagenes/Vision.jpeg'%}" alt="">
+		<img src="{% static 'Imagenes/Vision.png'%}" alt="">
+		<div class="text">
+			{{vision.descripcion}}
+		</div>
 	</div>
-	<div class="container-nuestras-marcas">
-		<img src="{% static 'Imagenes/nuestras marcas.jpeg' %}" alt="">
+	<div class="container-nuestras-marcas bg-inf-der">
+		<img style="width: 100%;" src="{% static 'Imagenes/nuestras marcas.png' %}" alt="">
 		<div style="display: flex; width: 100%; justify-content: center; align-items: center;">
 			<img class="logo" src="{% static 'Imagenes/logo MYKONOS.jpg' %}" alt="">
-			<img class="logo" src="{% static 'Imagenes/Logo VR.png' %}" alt="">
 			<img class="logo" src="{% static 'Imagenes/Terrazzo-logo.jpg' %}" alt="">
+			<img class="logo" src="{% static 'Imagenes/Logo VR.png' %}" alt="">
 		</div>
 	</div>
 </body>
