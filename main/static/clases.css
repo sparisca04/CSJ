@@ -270,7 +270,7 @@ input[type="submit"]:hover {
   color: white;
   text-transform: uppercase;
   text-align: center;
-  font-size: max(3vw, 26px);
+  font-size: max(3vw, 31px);
 }
 .intro-subtitle {
   color: white;
@@ -473,8 +473,9 @@ input[type="submit"]:hover {
   column-gap: 30px;
 }
 .col {
-  width: 350px;
-  height: 500px;
+  max-width: 350px;
+  height: 90vw;
+  max-height: 500px;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
@@ -784,6 +785,9 @@ input[type="submit"]:hover {
   }
 }
 @media only screen and (max-width: 500px) {
+  .intro-subtitle {
+    text-align: center;
+  }
   .container-contact {
     display: none;
   }
