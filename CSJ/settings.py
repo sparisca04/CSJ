@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-qf4hsyxl*ulm_jfjqsmimlk7xf2wmc%e5@ie*&z@$zfn0d1aza
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['18.223.43.128',
+                 'csjgrupoinmobiliaria.com',
+                 'www.csjgrupoinmobiliaria.com']
 
 
 # Application definition
@@ -39,8 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-    'galleryfield',
-    'sorl.thumbnail'
 ]
 
 MIDDLEWARE = [
