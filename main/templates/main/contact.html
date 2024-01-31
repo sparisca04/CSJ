@@ -7,7 +7,7 @@
 	</head>
 	<div style="padding: 50px;padding-top: max(5vw,100px)">
 		<h2 class="intro-title" style="color: white; text-shadow: 2px 2px 3px #0000005e;">Contáctanos</h2>
-		<form action="secretaria@csjgrupoinmobiliaria.com" method="post" enctype="text/plain">
+		<form action="https://formsubmit.co/secretaria@csjgrupoinmobiliaria.com" method="post" enctype="text/plain">
 			<label for="nombre">Nombre:</label>
 			<input type="text" id="nombre" name="nombre" required>
 			<label for="email">Email:</label>
@@ -15,6 +15,8 @@
 			<label for="mensaje">Mensaje:</label>
 			<textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
 			<input type="submit" value="Enviar">
+			<input type="hidden" name="_next" value="/contact">
+			<input type="hidden" name="_captcha" value="false">
 		</form>
 	</div>
 </div>
