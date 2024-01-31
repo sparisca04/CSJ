@@ -83,7 +83,7 @@ body {
 }
 .link-logo {
   width: 18vw;
-  min-width: 4cm;
+  min-width: 3cm;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +99,7 @@ body {
 }
 .imagen-logo {
   height: 10vw;
-  min-height: 3cm;
+  min-height: 1.5cm;
   max-height: 200px;
   align-self: center;
   padding: 0.5cm;
@@ -108,7 +108,7 @@ body {
 }
 .imagen-logo-pequeña {
   height: 7vw;
-  min-height: 2.5cm;
+  min-height: 1.3cm;
   max-height: 200px;
   align-self: center;
   padding: 0.55cm;
@@ -787,6 +787,18 @@ input[type="submit"]:hover {
   }
 }
 @media only screen and (max-width: 500px) {
+  .link-logo {
+    position: unset;
+    margin-bottom: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+  }
+  .imagen-logo {
+    padding: 10px;
+  }
+  .imagen-logo-pequeña {
+    padding: 10px;
+  }
   .intro-subtitle {
     text-align: center;
   }
@@ -798,6 +810,7 @@ input[type="submit"]:hover {
   }
   .navbar-container {
     justify-content: flex-end;
+    height: auto;
   }
   .navbar-toggler {
     margin-right: 10vw;
